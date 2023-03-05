@@ -1,0 +1,47 @@
+.footer {
+  background-color: black;
+  color: var(--light-gray);
+  width: 100%;
+  padding: 1rem;
+  position: static;
+  padding-top: 2rem;
+  height: 10rem;
+  display: flex;
+  font-size: 1.1rem;
+}
+
+.first-section {
+  letter-spacing: 1.5px;
+  line-height: 2rem;
+  width: 50%;
+}
+
+.social-media {
+  position: absolute;
+  right: 10%;
+}
+
+.social-media a {
+  color: white;
+  margin: 13px;
+}
+
+.social-media a:hover,
+.social-media a:active {
+  transition: 0.3s;
+  color: var(--light-brown);
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    text-align: center;
+  }
+  .first-section {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .social-media {
+    margin-top: 12%;
+    width: 80%;
+  }
+}
