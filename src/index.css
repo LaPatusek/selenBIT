@@ -1,0 +1,17 @@
+@import './css-reset.css';
+
+:root {
+  --light-gray: #615d5e;
+  --dark-gray: #262626;
+  --light-brown: #cc9955;
+}
+
+body {
+  background-color: rgb(85, 84, 84);
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
