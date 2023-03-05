@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .nav {
   position: absolute;
   right: 5%;
@@ -80,3 +81,87 @@ a.active {
     background-color: #885000;
   }
 }
+=======
+.nav {
+  position: absolute;
+  right: 5%;
+  top: 130px;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-links a {
+  color: white;
+  text-transform: uppercase;
+  margin: 8px;
+  letter-spacing: 0.08rem;
+}
+
+a.active { 
+    color:#dc8915;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  transition: 0.3s;
+  color: #dc8915;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-menu {
+    display: block;
+  }
+  .hamburger-menu-icon {
+    z-index: 5;
+    position: absolute;
+    top: -10px;
+    right: 5%;
+    cursor: pointer;
+    background-color: #dc8915;
+    padding: 5.5px;
+    border: 1px;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+  }
+  .nav-menu-800 {
+    position: absolute;
+    right: 10%;
+    width: 300px;
+  }
+  .nav-menu-800 a {
+    color: white;
+  }
+  .nav-menu-800 ul {
+    position: absolute;
+    right: -10px;
+    bottom: -188px;
+    background-color: #dc8915;
+    border: 2.5px solid var(--dark-gray);
+    border-radius: 13%;
+    overflow: hidden;
+    text-align: center;
+  }
+  .nav-menu-800 li {
+    padding: 10px;
+    width: 100px;
+    background-color: #dc8915;
+  }
+  .nav-menu-800 li:hover {
+    transition: 0.3s;
+    background-color: white;
+  }
+  .nav-menu-800 li:hover,
+  .nav-menu-800 li:active {
+    transition: 0.3s;
+    color: #dc8915;
+  }
+  .active li {
+    background-color: #885000;
+  }
+}
+>>>>>>> 90d1ffcace57f94e7767c3448206fd5f0c8b7765
