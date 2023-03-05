@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 .header {
     background-color: var(--dark-gray);
     padding: 8px;
     display: flex;
-=======
-.header {
-    background-color: var(--dark-gray);
-    padding: 8px;
-    display: flex;
->>>>>>> 90d1ffcace57f94e7767c3448206fd5f0c8b7765
  }
