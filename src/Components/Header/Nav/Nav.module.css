@@ -2,6 +2,7 @@
   position: absolute;
   right: 5%;
   top: 130px;
+  z-index: 4;
 }
 
 .nav-menu {

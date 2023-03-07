@@ -8,6 +8,7 @@ import styles from './onas.module.css';
 const Onas = () => {
   return (
     <Fragment>
+      <div className={styles['blur-circle-shape']}></div>
       <div className={styles.wrap}>
         <section className={styles['left-section']}>
           <p className={styles.paragraf}>Selenbit - przekazujemy wiedzę</p>
