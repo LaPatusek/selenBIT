@@ -457,7 +457,7 @@
 }
 
 .text {
-  padding: 4.5rem;
+  margin: 4.5rem;
 }
 
 .text h1 {
@@ -469,10 +469,17 @@
 }
 
 .text h3 {
+  font-size: 1.15rem;
   text-align: center;
   background: -webkit-linear-gradient(white, #38495a);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.link-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .main-button {
@@ -481,9 +488,15 @@
   text-align: center;
   color:white;
   background-color: #ffab00;
-  border: 1px solid #ffab00;
+  letter-spacing: 1.2px;
+  border: 1.5px solid #ffab00;
   border-radius: 50px 50px 50px 50px;
   padding: 16px 50px 16px 50px;
+}
+
+.main-button:hover {
+  transition: .4s;
+  background: transparent;
 }
 
 @keyframes animStar {

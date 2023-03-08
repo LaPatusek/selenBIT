@@ -11,7 +11,11 @@ const AnimatedBackground = () => {
       <div className={styles.text}>
         <h3>Rozwiązania IT którzych potrzebujesz</h3>
         <h1>Przyszłość zaczyna się tutaj</h1>
-        <Link to='/szkolenia' className={styles['main-button']}> nasza oferta</Link>
+        <div className={styles['link-box']}>
+          <Link to='/szkolenia' className={styles['main-button']}>
+            nasza oferta
+          </Link>
+        </div>
       </div>
     </section>
   );
