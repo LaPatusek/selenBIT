@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Cennik from './Pages/cennik';
 import Kontakt from './Pages/kontakt';
-import Main from './Pages/Main';
+import Main from './Pages/main';
 import Onas from './Pages/onas';
 import Szkolenia from './Pages/szkolenia';
 

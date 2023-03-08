@@ -1,5 +1,13 @@
+import { Fragment } from 'react';
+
+import AnimatedBackground from '../Components/Elements/animatedBackground';
+
 const Main = () => {
-  return <h1>Strona główna</h1>;
+  return (
+    <Fragment>
+      <AnimatedBackground />
+    </Fragment>
+  );
 };
 
 export default Main;

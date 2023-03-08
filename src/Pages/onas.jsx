@@ -8,11 +8,11 @@ import styles from './onas.module.css';
 const Onas = () => {
   return (
     <Fragment>
-      <div className={styles['blur-circle-shape']}></div>
+      <div className={styles['blur-circle-shape']} />
       <div className={styles.wrap}>
         <section className={styles['left-section']}>
           <p className={styles.paragraf}>Selenbit - przekazujemy wiedzę</p>
-          <img src={photo} alt='' loading='lazy' width='400px' height='534px' />
+          <img src={photo} alt='' loading='lazy' />
           <div className={styles['left-section--quote']}>
             <p>
               „Żyj tak, jakbyś miał umrzeć jutro. Ucz się tak, jakbyś miał żyć

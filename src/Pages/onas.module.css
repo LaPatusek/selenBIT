@@ -26,13 +26,13 @@
 }
 
 .wrap img {
-    width: 400px;
-    aspect-ratio: 400 / 267;
+    width: 420px;
+    aspect-ratio: 420 / 267;
     height: auto;
 }
 
 .left-section {
-    width: 400px;
+    width: 420px;
     padding-bottom: 10rem;
 }
 
