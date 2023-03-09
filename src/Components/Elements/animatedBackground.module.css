@@ -486,16 +486,16 @@
   text-transform: uppercase;
   margin-top: 50px;
   text-align: center;
-  color:white;
-  background-color: #ffab00;
+  color: white;
+  background-color: var(--orange);
   letter-spacing: 1.2px;
-  border: 1.5px solid #ffab00;
+  border: 1.5px solid var(--orange);
   border-radius: 50px 50px 50px 50px;
   padding: 16px 50px 16px 50px;
 }
 
 .main-button:hover {
-  transition: .4s;
+  transition: 0.4s;
   background: transparent;
 }
 

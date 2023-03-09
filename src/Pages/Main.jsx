@@ -65,13 +65,15 @@ const Main = () => {
         </div>
 
         <div className={styles['third-section--right-part']}>
-          <p>
-            Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny i
-            słuszny. Bądź rozsądny w odpoczynku
-          </p>
-          {/* <hr /> */}
-          <p>Marcus Aurelius</p>
-          <img src={chwilowe} alt='' width='300px'/>
+          <div className={styles['third-section--cytat']}>
+            <p>
+              Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny i
+              słuszny. Bądź rozsądny w odpoczynku
+            </p>
+            <hr />
+            <p>Marcus Aurelius</p>
+          </div>
+          <img src={chwilowe} alt='' width='300px' />
         </div>
       </section>
     </Fragment>
