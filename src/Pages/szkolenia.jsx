@@ -1,5 +1,14 @@
+import { Fragment } from 'react';
+
 const Szkolenia = () => {
-  return <h1> Szkolenia </h1>;
+  return (
+    <Fragment>
+      <div />
+      <h3> Szkolenia </h3>
+      <div />
+      <h1>Szkolenia informatyczne</h1>
+    </Fragment>
+  );
 };
 
 export default Szkolenia;
