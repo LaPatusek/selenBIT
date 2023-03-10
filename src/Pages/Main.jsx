@@ -67,11 +67,11 @@ const Main = () => {
         <div className={styles['third-section--right-part']}>
           <div className={styles['third-section--cytat']}>
             <p>
-              Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny i
-              słuszny. Bądź rozsądny w odpoczynku
+            „Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny i
+              słuszny. Bądź rozsądny w odpoczynku.”
             </p>
-            <hr />
-            <p>Marcus Aurelius</p>
+            {/* <hr /> */}
+            <p>~Marcus Aurelius</p>
           </div>
           <img src={chwilowe} alt='' width='300px' />
         </div>

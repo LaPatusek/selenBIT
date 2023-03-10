@@ -14,6 +14,9 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles['nav-links']}>
+        <NavLink to='/Main' activeClassName={styles.active}>
+          Strona główna
+        </NavLink>
         <NavLink to='/szkolenia' activeClassName={styles.active}>
           Szkolenia
         </NavLink>
@@ -35,6 +38,10 @@ const Nav = () => {
         {menuIsVis && (
           <div className={styles['nav-menu-800']}>
             <ul>
+              <NavLink to='/main' activeClassName={styles.active}>
+                <li>Strona główna</li>
+              </NavLink>
+
               <NavLink to='/szkolenia' activeClassName={styles.active}>
                 <li>Szkolenia</li>
               </NavLink>
