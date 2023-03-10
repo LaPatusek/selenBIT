@@ -1,0 +1,41 @@
+
+
+.page-title {
+    padding: 2rem;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.page-title h3 {
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.page-title h3::before {
+    content: '';
+    position: absolute;
+    transform: translateY(500%) translateX(-275px);
+    padding-left: 100px;
+    width: 75px;
+    height: 2px;
+    background-color: white;
+}
+
+.page-title h3::after {
+    content: '';
+    position: absolute;
+    transform: translateY(500%);
+    margin-left: 100px;
+    padding-right: 100px;
+    width: 75px;
+    height: 2px;
+    background-color: white;
+}
+
+.page-title h1 {
+    font-size: 3rem;
+}
