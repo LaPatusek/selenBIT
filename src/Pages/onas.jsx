@@ -28,12 +28,12 @@ const Onas = () => {
           <h2>
             Jesteśmy firmą, która od początku 2018 roku działa na ternie
             Rzeszowa i całego kraju w branży informatyczno-szkoleniowej. Przez
-            ostatnie lata dokładamy wszelkich starań aby sprostać współczesnym
+            ostatnie lata dokładamy wszelkich starań, aby sprostać współczesnym
             wymaganiom naszych klientów. Wiemy, że każde szkolenie powinno
             przynosić efekty w postaci nowych umiejętności u naszych Kursantów.
-            Pomagamy rozwijać posiadane umiejętności aby sprostać współczesnym
+            Pomagamy rozwijać posiadane umiejętności, aby sprostać współczesnym
             wymaganiom cyfryzacji. Podnosimy kwalifikacje wspólnie zmieniając
-            świat na lepsze, co jest naszym celem. Dbamy aby przy tym wszystkim
+            świat na lepsze, co jest naszym celem. Dbamy, aby przy tym wszystkim
             szkolenia odbywały się w dobrej, przyjaznej atmosferze. Nasze
             szkolenia są skierowane dla osób w każdym wieku – od dzieci
             pomagając im wejść w świat informatycznej logiki po seniorów, którzy

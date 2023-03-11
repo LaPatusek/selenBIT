@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import thirdIcon from '../Assets/human-icon.png';
 import chwilowe from '../Assets/meeting-photo.jpg';
 import firstIcon from '../Assets/migrate-icon.png';
@@ -54,6 +55,15 @@ const Main = () => {
         </div>
       </section>
 
+      <section className={styles['fourth-section']}>
+        <h3>SelenBit - Przekazujemy wiedzę</h3>
+        <h2>
+          Pomożemy Ci rozwinąć posiadane umiejętności, aby sprostać współczesnym
+          wymaganiom cyfryzacji.
+        </h2>
+        <Link to='/cennik' className={styles['fourth-section--button']}>Wyceń szkolenie</Link>
+      </section>
+
       <section className={styles['third-section']}>
         <div className={styles['third-section--left-part']}>
           <h2>O nas</h2>
@@ -67,10 +77,9 @@ const Main = () => {
         <div className={styles['third-section--right-part']}>
           <div className={styles['third-section--cytat']}>
             <p>
-            „Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny i
-              słuszny. Bądź rozsądny w odpoczynku.”
+              „Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny
+              i słuszny. Bądź rozsądny w odpoczynku.”
             </p>
-            {/* <hr /> */}
             <p>~Marcus Aurelius</p>
           </div>
           <img src={chwilowe} alt='' width='300px' />
