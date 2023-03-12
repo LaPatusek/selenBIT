@@ -5,12 +5,12 @@
   --dark-gray: #262626;
   --light-brown: #cc9955;
   --orange: #ffab00;
-  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #838282;
+  background-color: #151d28;
   color: white;
+  scroll-behavior: smooth;
 }
 
 code {

@@ -1,5 +1,4 @@
 import { Messages3 } from 'iconsax-react';
-import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import photo from '../Assets/meeting-photo.jpg';
 
@@ -7,7 +6,7 @@ import styles from './onas.module.css';
 
 const Onas = () => {
   return (
-    <Fragment>
+    <div className={styles.background}>
       <div className={styles['blur-circle-shape']} />
       <div className={styles.wrap}>
         <section className={styles['left-section']}>
@@ -38,7 +37,8 @@ const Onas = () => {
             szkolenia są skierowane dla osób w każdym wieku – od dzieci
             pomagając im wejść w świat informatycznej logiki po seniorów, którzy
             ochoczo wkraczają w świat ułatwień jakie niesie ze sobą doba
-            cyfryzacji. Organizujemy szkolenia grupowe, jak i indywidualne.
+            cyfryzacji. Organizujemy szkolenia grupowe, jak i indywidualne.{' '}
+            <br />
             Spotkajmy się na szkoleniu!
           </h2>
           <Link to='/Kontakt' className={styles['right-section--contact-link']}>
@@ -56,7 +56,7 @@ const Onas = () => {
           <div className={styles['bottom-firm-box']}>przykład 5</div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

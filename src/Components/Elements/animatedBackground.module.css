@@ -1,5 +1,5 @@
 .stars-background {
-  height: 20rem;
+  height: 23rem;
   width: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
@@ -457,7 +457,7 @@
 }
 
 .text {
-  margin: 4.5rem;
+  margin: 5.5rem;
 }
 
 .text h1 {
