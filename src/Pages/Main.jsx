@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import thirdIcon from '../Assets/human-icon.png';
-import chwilowe from '../Assets/meeting-photo.jpg';
 import firstIcon from '../Assets/migrate-icon.png';
 import secondIcon from '../Assets/target-icon.png';
 import AnimatedBackground from '../Components/Elements/animatedBackground';
+import Quote from '../Components/Elements/quote';
 import styles from './main.module.css';
 
 const Main = () => {
@@ -61,7 +61,9 @@ const Main = () => {
           Pomożemy Ci rozwinąć posiadane umiejętności, aby sprostać współczesnym
           wymaganiom cyfryzacji.
         </h2>
-        <Link to='/cennik' className={styles['fourth-section--button']}>Wyceń szkolenie</Link>
+        <Link to='/cennik' className={styles['fourth-section--button']}>
+          Wyceń szkolenie
+        </Link>
       </section>
 
       <section className={styles['third-section']}>
@@ -75,14 +77,7 @@ const Main = () => {
         </div>
 
         <div className={styles['third-section--right-part']}>
-          <div className={styles['third-section--cytat']}>
-            <p>
-              „Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny
-              i słuszny. Bądź rozsądny w odpoczynku.”
-            </p>
-            <p>~Marcus Aurelius</p>
-          </div>
-          <img src={chwilowe} alt='' width='300px' />
+          <Quote />
         </div>
       </section>
     </Fragment>

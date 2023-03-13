@@ -14,7 +14,7 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles['nav-links']}>
-        <NavLink to='/Main' activeClassName={styles.active}>
+        <NavLink to='/main' activeClassName={styles.active}>
           Strona główna
         </NavLink>
         <NavLink to='/szkolenia' activeClassName={styles.active}>
@@ -26,7 +26,7 @@ const Nav = () => {
         <NavLink to='/o-nas' activeClassName={styles.active}>
           O nas
         </NavLink>
-        <NavLink to='/Kontakt' activeClassName={styles.active}>
+        <NavLink to='/kontakt' activeClassName={styles.active}>
           Kontakt
         </NavLink>
       </div>
@@ -54,7 +54,7 @@ const Nav = () => {
                 <li> O nas </li>
               </NavLink>
 
-              <NavLink to='/Kontakt' activeClassName={styles.active}>
+              <NavLink to='/kontakt' activeClassName={styles.active}>
                 <li>Kontakt </li>
               </NavLink>
             </ul>

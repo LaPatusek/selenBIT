@@ -70,7 +70,7 @@
 .third-section {
   background-color: #232323;
   min-height: 250px;
-  padding: 20px 30px 20px 30px;
+  padding: 25px 3.5rem 25px 3.5rem;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -96,20 +96,6 @@
   margin-right: 20px;
   display: flex;
   justify-content: flex-end;
-}
-
-.third-section--cytat {
-  width: 40%;
-}
-
-.third-section--cytat p {
-  margin-right: 8px;
-  margin-bottom: 5px;
-  text-align: right;
-  line-height: 1.2rem;
-  font-size: 1.1rem;
-  font-style: italic;
-  letter-spacing: 0.7px;
 }
 
 .fourth-section {
