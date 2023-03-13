@@ -34,14 +34,17 @@
 
 @media screen and (max-width: 800px) {
   .footer {
+    display: flex;
+    justify-content: center;
     text-align: center;
+    min-height: 170px;
   }
   .first-section {
     width: 100%;
     margin-bottom: 25px;
   }
   .social-media {
-    margin-top: 12%;
+    margin-top: 4rem;
     width: 80%;
   }
 }

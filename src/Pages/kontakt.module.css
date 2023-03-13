@@ -40,7 +40,8 @@
 .icon {
   background-color: var(--light-brown);
   padding: 10px;
-  width: 10%;
+  width: 44px;
+  height: 44px;
   border-radius: 10%;
 }
 
@@ -132,4 +133,33 @@
 .input-error {
   color: #d71f1f;
   letter-spacing: 0.3px;
+}
+
+@media screen and (max-width: 800px) {
+  .wrap {
+    display: block;
+    padding: 3rem 0 3rem 0;
+    height: auto;
+    width: auto;
+  }
+
+  .background-image {
+    height: auto;
+  }
+
+  .left-section {
+    width: auto;
+  }
+
+  .right-section {
+    width: auto;
+  }
+
+  .right-section input {
+    width:100%;
+  }
+
+  .right-section textarea {
+    width: 93%;
+  }
 }

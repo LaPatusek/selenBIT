@@ -176,13 +176,13 @@ const Cennik = () => {
             Opcje dodatkowe:
             <div className={styles['form-checkboxes']}>
               <input type='checkbox' id='catering' />
-              <label htmlFor='catering'>Catering </label>
+              <label htmlFor='catering'>Catering </label> <br />
               <input type='checkbox' id='sala' />
-              <label htmlFor='sala'>Sala szkoleniowa </label>
+              <label htmlFor='sala'>Sala szkoleniowa </label> <br />
               <input type='checkbox' id='egzamin' />
-              <label htmlFor='egzamin'>Egzamin</label>
+              <label htmlFor='egzamin'>Egzamin</label> <br />
               <input type='checkbox' id='materialy' />
-              <label htmlFor='materialy'>Materiały</label>
+              <label htmlFor='materialy'>Materiały</label> <br />
             </div>
             <button>Wyślij</button>
           </form>
