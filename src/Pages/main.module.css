@@ -10,7 +10,7 @@
   margin: 10px;
   color: rgb(44, 44, 44);
   font-size: 3.8rem;
-  letter-spacing: 1.2px;
+  letter-spacing: .8px;
 }
 
 .second-section-title h3 {
@@ -58,7 +58,7 @@
 .content-box h2 {
   padding: 0px 10px 5px 10px;
   font-size: 1.8rem;
-  letter-spacing: 1.1px;
+  letter-spacing: .8px;
   line-height: 1.7rem;
   color: #fff2d9;
 }
