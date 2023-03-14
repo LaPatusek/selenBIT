@@ -1,6 +1,6 @@
 .blockquote-wrapper {
-  display: flex;
-  width: 60%;
+  width: 50%;
+  max-width: 350px;
 }
 
 .blockquote {

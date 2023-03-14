@@ -81,3 +81,31 @@
   font-size: 1.05rem;
   line-height: 1.2rem;
 }
+
+
+@media screen and (max-width: 800px) {
+  .main-section {
+    display: block;
+    justify-content: center;
+  }
+
+  .page-title h3::before {
+    transform: translateY(500%) translateX(-43px);
+    padding-left: 13px;
+    width: 10px;
+  }
+
+  .page-title h3::after {
+    margin-left: 20px;
+    padding-right: 13px;
+    width: 10px;
+  }
+
+  .main-section-container {
+    width: auto;
+  }
+
+  .main-section--right {
+    margin-top: 25px;
+  }
+}

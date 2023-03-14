@@ -40,6 +40,7 @@
   width: 33%;
   max-width: 400px;
   background-color: #151d28;
+  box-shadow: 8px 10px 20px 0.3px #0e141b;
   margin: 10px;
   margin-left: 30px;
   margin-right: 30px;
@@ -70,10 +71,8 @@
 .third-section {
   background-color: #232323;
   min-height: 250px;
-  padding: 25px 3.5rem 25px 3.5rem;
+  padding: 25px 5rem 25px 3.5rem;
   display: flex;
-  align-content: center;
-  justify-content: center;
 }
 
 .third-section--left-part {
@@ -92,7 +91,7 @@
 }
 
 .third-section--right-part {
-  width: auto;
+  width: 70%;
   margin-right: 20px;
   display: flex;
   justify-content: flex-end;

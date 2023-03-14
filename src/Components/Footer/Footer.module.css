@@ -5,6 +5,7 @@
   padding: 1rem;
   position: static;
   padding-top: 2rem;
+  padding-left: 3.5rem;
   height: 10rem;
   display: flex;
   font-size: 1.1rem;
@@ -45,17 +46,20 @@
 
 @media screen and (max-width: 800px) {
   .footer {
-    display: flex;
+    display: block;
     justify-content: center;
     text-align: center;
-    min-height: 170px;
+    min-height: 140px;
+    padding: 1rem;
   }
   .first-section {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   .social-media {
-    margin-top: 4rem;
-    width: 80%;
+    margin-left: 2rem;
+    width: 100%;
+    position: relative;
+    display: contents;
   }
 }
