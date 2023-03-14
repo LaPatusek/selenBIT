@@ -41,13 +41,6 @@
   z-index: 2;
 }
 
-@media screen and (max-width: 800px) {
-  .blockquote h1 {
-    font-size: 1.3rem;
-    line-height: 1;
-  }
-}
-
 .blockquote h4 {
   position: relative;
   color: #ffffff;
@@ -63,4 +56,14 @@
 
 .blockquote h4:first-letter {
   margin-left: -12px;
+}
+
+@media screen and (max-width: 800px) {
+  .blockquote-wrapper {
+    display: flex;
+  }
+
+  .blockquote h4::first-letter {
+    margin-left: -25px;
+  }
 }

@@ -98,7 +98,7 @@
 }
 
 .fourth-section {
-  background-color: #CFAA7B;
+  background-color: #cfaa7b;
   min-height: 330px;
   padding: 3.5rem;
   padding-left: 4rem;
@@ -124,8 +124,48 @@
   color: white;
 }
 
-.fourth-section--button:hover {
+.fourth-section--button:hover,
+.fourth-section--button:active {
   background-color: transparent;
   color: #151d28;
   transition: 0.4s;
+}
+
+@media screen and (max-width: 800px) {
+  .second-section {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .second-section-boxes {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-box {
+    width: 100%;
+    margin-top: 1.8rem;
+    margin-left: 0;
+  }
+
+  .third-section {
+    min-height: auto;
+    display: block;
+  }
+
+  .third-section--left-part {
+    display: block;
+  }
+
+  .third-section--right-part {
+    margin-top: 2rem;
+    display: block;
+  }
+
+  .fourth-section h3 {
+    font-size: 1.1rem;
+  }
 }

@@ -7,7 +7,6 @@ import styles from './onas.module.css';
 const Onas = () => {
   return (
     <div className={styles.background}>
-      <div className={styles['blur-circle-shape']} />
       <div className={styles.wrap}>
         <section className={styles['left-section']}>
           <p className={styles.paragraf}>Selenbit - przekazujemy wiedzę</p>
@@ -44,6 +43,18 @@ const Onas = () => {
           <Link to='/Kontakt' className={styles['right-section--contact-link']}>
             Skontaktuj się z nami! <Messages3 size='17' />
           </Link>
+        </section>
+        <section className={styles['left-section-800']}>
+          <p className={styles.paragraf}>Selenbit - przekazujemy wiedzę</p>
+          <img src={photo} alt='' loading='lazy' />
+          <div className={styles['left-section--quote']}>
+            <p>
+              „Żyj tak, jakbyś miał umrzeć jutro. Ucz się tak, jakbyś miał żyć
+              wiecznie.”
+            </p>
+            <hr />
+            <p>Gandhi Mahatma</p>
+          </div>
         </section>
       </div>
       <div className={styles['bottom-section']}>
