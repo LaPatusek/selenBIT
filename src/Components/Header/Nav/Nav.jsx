@@ -38,23 +38,23 @@ const Nav = () => {
         {menuIsVis && (
           <div className={styles['nav-menu-800']}>
             <ul>
-              <NavLink to='/main' activeClassName={styles.active}>
+              <NavLink to='/main' activeClassName={styles.active} onClick={menuHandler}>
                 <li>Strona główna</li>
               </NavLink>
 
-              <NavLink to='/szkolenia' activeClassName={styles.active}>
+              <NavLink to='/szkolenia' activeClassName={styles.active} onClick={menuHandler}>
                 <li>Szkolenia</li>
               </NavLink>
 
-              <NavLink to='/cennik' activeClassName={styles.active}>
+              <NavLink to='/cennik' activeClassName={styles.active} onClick={menuHandler}>
                 <li> Cennik </li>
               </NavLink>
 
-              <NavLink to='/o-nas' activeClassName={styles.active}>
+              <NavLink to='/o-nas' activeClassName={styles.active} onClick={menuHandler}>
                 <li> O nas </li>
               </NavLink>
 
-              <NavLink to='/kontakt' activeClassName={styles.active}>
+              <NavLink to='/kontakt' activeClassName={styles.active} onClick={menuHandler}>
                 <li>Kontakt </li>
               </NavLink>
             </ul>
