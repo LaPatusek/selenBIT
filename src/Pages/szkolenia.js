@@ -1,14 +1,13 @@
-import styles from './szkolenia.module.css';
-
-import android from '../Assets/android-logo.png';
 import c from '../Assets/C++_Logo.png';
+import ict from '../Assets/ICT-logo.webp';
+import android from '../Assets/android-logo.png';
 import cyfryzacja from '../Assets/digitalization-icon.png';
 import ecdl from '../Assets/ecdl-logo.png';
-import ict from '../Assets/ICT-logo.webp';
 import imac from '../Assets/imac-icon.png';
 import java from '../Assets/java-logo.png';
 import web from '../Assets/web-logo.png';
 import workstation from '../Assets/workstation-logo.png';
+import styles from './szkolenia.module.css';
 
 const Szkolenia = () => {
   return (

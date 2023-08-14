@@ -1,7 +1,6 @@
 import { Messages3 } from 'iconsax-react';
 import { Link } from 'react-router-dom';
 import photo from '../Assets/meeting-photo.jpg';
-
 import styles from './onas.module.css';
 
 const Onas = () => {

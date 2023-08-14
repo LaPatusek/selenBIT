@@ -2,9 +2,9 @@ import { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
+import Main from './Pages/Main';
 import Cennik from './Pages/cennik';
 import Kontakt from './Pages/kontakt';
-import Main from './Pages/main';
 import Onas from './Pages/onas';
 import Szkolenia from './Pages/szkolenia';
 
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Fragment>
       <header>
-        <Header></Header>
+        <Header />
       </header>
 
       <main>
@@ -38,7 +38,9 @@ const App = () => {
         </Switch>
       </main>
 
-      <Footer></Footer>test
+      <footer>
+        <Footer />
+      </footer>
     </Fragment>
   );
 };

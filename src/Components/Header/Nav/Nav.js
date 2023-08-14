@@ -1,7 +1,6 @@
 import { HambergerMenu } from 'iconsax-react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-
 import styles from './Nav.module.css';
 
 const Nav = () => {
@@ -38,23 +37,43 @@ const Nav = () => {
         {menuIsVis && (
           <div className={styles['nav-menu-800']}>
             <ul>
-              <NavLink to='/main' activeClassName={styles.active} onClick={menuHandler}>
+              <NavLink
+                to='/main'
+                activeClassName={styles.active}
+                onClick={menuHandler}
+              >
                 <li>Strona główna</li>
               </NavLink>
 
-              <NavLink to='/szkolenia' activeClassName={styles.active} onClick={menuHandler}>
+              <NavLink
+                to='/szkolenia'
+                activeClassName={styles.active}
+                onClick={menuHandler}
+              >
                 <li>Szkolenia</li>
               </NavLink>
 
-              <NavLink to='/cennik' activeClassName={styles.active} onClick={menuHandler}>
+              <NavLink
+                to='/cennik'
+                activeClassName={styles.active}
+                onClick={menuHandler}
+              >
                 <li> Cennik </li>
               </NavLink>
 
-              <NavLink to='/o-nas' activeClassName={styles.active} onClick={menuHandler}>
+              <NavLink
+                to='/o-nas'
+                activeClassName={styles.active}
+                onClick={menuHandler}
+              >
                 <li> O nas </li>
               </NavLink>
 
-              <NavLink to='/kontakt' activeClassName={styles.active} onClick={menuHandler}>
+              <NavLink
+                to='/kontakt'
+                activeClassName={styles.active}
+                onClick={menuHandler}
+              >
                 <li>Kontakt </li>
               </NavLink>
             </ul>
