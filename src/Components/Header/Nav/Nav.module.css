@@ -16,8 +16,8 @@
   letter-spacing: 0.08rem;
 }
 
-a.active { 
-    color:#dc8915;
+a.active {
+  color: #dc8915;
 }
 
 .nav-links a:hover,
@@ -26,7 +26,7 @@ a.active {
   color: #dc8915;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .nav-links {
     display: none;
   }

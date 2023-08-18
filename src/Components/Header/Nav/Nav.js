@@ -13,19 +13,44 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles['nav-links']}>
-        <NavLink to='/main' activeClassName={styles.active}>
+        <NavLink
+          to='/main'
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }
+        >
           Strona główna
         </NavLink>
-        <NavLink to='/szkolenia' activeClassName={styles.active}>
+        <NavLink
+          to='/szkolenia'
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }
+        >
           Szkolenia
         </NavLink>
-        <NavLink to='/cennik' activeClassName={styles.active}>
+        <NavLink
+          to='/cennik'
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }
+        >
           Cennik
         </NavLink>
-        <NavLink to='/o-nas' activeClassName={styles.active}>
+        <NavLink
+          to='/o-nas'
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }
+        >
           O nas
         </NavLink>
-        <NavLink to='/kontakt' activeClassName={styles.active}>
+        <NavLink
+          to='/kontakt'
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }
+        >
           Kontakt
         </NavLink>
       </div>
@@ -39,7 +64,9 @@ const Nav = () => {
             <ul>
               <NavLink
                 to='/main'
-                activeClassName={styles.active}
+                className={({ isActive, isPending }) =>
+                  isPending ? 'pending' : isActive ? 'active' : ''
+                }
                 onClick={menuHandler}
               >
                 <li>Strona główna</li>
@@ -47,7 +74,9 @@ const Nav = () => {
 
               <NavLink
                 to='/szkolenia'
-                activeClassName={styles.active}
+                className={({ isActive, isPending }) =>
+                  isPending ? 'pending' : isActive ? 'active' : ''
+                }
                 onClick={menuHandler}
               >
                 <li>Szkolenia</li>
@@ -55,7 +84,9 @@ const Nav = () => {
 
               <NavLink
                 to='/cennik'
-                activeClassName={styles.active}
+                className={({ isActive, isPending }) =>
+                  isPending ? 'pending' : isActive ? 'active' : ''
+                }
                 onClick={menuHandler}
               >
                 <li> Cennik </li>
@@ -63,7 +94,9 @@ const Nav = () => {
 
               <NavLink
                 to='/o-nas'
-                activeClassName={styles.active}
+                className={({ isActive, isPending }) =>
+                  isPending ? 'pending' : isActive ? 'active' : ''
+                }
                 onClick={menuHandler}
               >
                 <li> O nas </li>
@@ -71,7 +104,9 @@ const Nav = () => {
 
               <NavLink
                 to='/kontakt'
-                activeClassName={styles.active}
+                className={({ isActive, isPending }) =>
+                  isPending ? 'pending' : isActive ? 'active' : ''
+                }
                 onClick={menuHandler}
               >
                 <li>Kontakt </li>

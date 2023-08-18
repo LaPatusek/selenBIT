@@ -1,6 +1,6 @@
 import { Messages3 } from 'iconsax-react';
 import { Link } from 'react-router-dom';
-import photo from '../Assets/meeting-photo.jpg';
+import photo from '../Assets/meeting-photo.webp';
 import styles from './onas.module.css';
 
 const Onas = () => {
@@ -40,7 +40,10 @@ const Onas = () => {
             Spotkajmy się na szkoleniu!
           </h2>
           <Link to='/Kontakt' className={styles['right-section--contact-link']}>
-            Skontaktuj się z nami! <Messages3 size='17' />
+            <div className={styles['contant-link-content']}>
+              Skontaktuj się z nami!
+            </div>
+            <Messages3 size='17' />
           </Link>
         </section>
         <section className={styles['left-section-800']}>

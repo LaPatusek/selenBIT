@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import thirdIcon from '../Assets/human-icon.png';
-import firstIcon from '../Assets/migrate-icon.png';
-import secondIcon from '../Assets/target-icon.png';
+import thirdIcon from '../Assets/human-icon.webp';
+import firstIcon from '../Assets/migrate-icon.webp';
+import secondIcon from '../Assets/target-icon.webp';
 import AnimatedBackground from '../Components/Elements/animatedBackground';
 import Quote from '../Components/Elements/quote';
 import styles from './main.module.css';

@@ -78,6 +78,8 @@
 }
 
 .right-section--contact-link {
+  position: relative;
+  display: flex;
   float: right;
   color: white;
   font-weight: 600;
@@ -89,6 +91,10 @@
   padding: 12px;
   padding-right: 24px;
   padding-left: 24px;
+}
+
+.right-section--contact-link svg {
+  margin-left: 5px;
 }
 
 .right-section--contact-link:hover,
@@ -166,11 +172,10 @@
 
   .right-section h2 {
     line-height: 1.3rem;
-
   }
 
   .right-section--contact-link {
-    float:left;
+    float: left;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;

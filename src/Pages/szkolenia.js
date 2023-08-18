@@ -1,12 +1,12 @@
-import c from '../Assets/C++_Logo.png';
+import c from '../Assets/C++_Logo.webp';
 import ict from '../Assets/ICT-logo.webp';
-import android from '../Assets/android-logo.png';
-import cyfryzacja from '../Assets/digitalization-icon.png';
-import ecdl from '../Assets/ecdl-logo.png';
-import imac from '../Assets/imac-icon.png';
-import java from '../Assets/java-logo.png';
-import web from '../Assets/web-logo.png';
-import workstation from '../Assets/workstation-logo.png';
+import android from '../Assets/android-logo.webp';
+import cyfryzacja from '../Assets/digitalization-icon.webp';
+import ecdl from '../Assets/ecdl-logo.webp';
+import imac from '../Assets/imac-icon.webp';
+import java from '../Assets/java-logo.webp';
+import web from '../Assets/web-logo.webp';
+import workstation from '../Assets/workstation-logo.webp';
 import styles from './szkolenia.module.css';
 
 const Szkolenia = () => {
@@ -21,7 +21,12 @@ const Szkolenia = () => {
       <section className={styles['main-section']}>
         <div className={styles['main-section--left']}>
           <div className={styles['main-section-container']}>
-            <img src={cyfryzacja} width='32' alt='' />
+            <img
+              src={cyfryzacja}
+              width='32px'
+              height='32px'
+              alt='Cyfryzacja 2.0'
+            />
             <h3>Cyfryzacja 2.0</h3>
             <p>
               Specjalnie dobrany pakiet szkoleń dla firm. W pierwszym etapie
@@ -34,7 +39,7 @@ const Szkolenia = () => {
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={java} width='32' alt='' />
+            <img src={java} width='32px' height='32px' alt='Java' />
             <h3>Java</h3>
             <p>
               Jak wskazują statystyki język programowania JAVA jest wciąż
@@ -44,7 +49,7 @@ const Szkolenia = () => {
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={android} width='32' alt='' />
+            <img src={android} width='32px' height='32px' alt='Android' />
             <h3>Android</h3>
             <p>
               Aplikacja mobilna stała się nieodłącznym elementem naszego życia.
@@ -55,7 +60,12 @@ const Szkolenia = () => {
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={web} width='32' alt='' />
+            <img
+              src={web}
+              width='32px'
+              height='32px'
+              alt='Tworzenie stron WWW'
+            />
             <h3>Tworzenie stron WWW</h3>
             <p>
               Z nami nauczysz się tworzyć strony internetowe. Oferujemy naukę
@@ -66,19 +76,24 @@ const Szkolenia = () => {
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={ecdl} width='32' alt='' />
+            <img src={ecdl} width='32px' height='32px' alt='ECDL' />
             <h3>ECDL</h3>
             <p>
               Przygotujemy Cię do zdania egzaminu ECDL – Europejski Certyfikat
               Umiejętności Komputerowych. Przygotujemy także cały egzamin. – Na
-              każdym poziomie. .
+              każdym poziomie.
             </p>
           </div>
         </div>
 
         <div className={styles['main-section--right']}>
           <div className={styles['main-section-container']}>
-            <img src={ict} width='32' alt='' />
+            <img
+              src={ict}
+              width='32px'
+              height='32px'
+              alt='Technologie informacyjno-komunikacyjne'
+            />
             <h3>Technologie informacyjno-komunikacyjne (TIK)</h3>
             <p>
               Technologie Informacyjno-komunikacyjne to w ogólnym rozumieniu
@@ -93,7 +108,7 @@ const Szkolenia = () => {
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={c} width='32' alt='' />
+            <img src={c} width='32px' height='32px' alt='C++' />
             <h3>C++</h3>
             <p>
               Nasza firma prowadzi szkolenia z środowiska C++. Język
@@ -104,7 +119,12 @@ const Szkolenia = () => {
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={imac} width='32' alt='' />
+            <img
+              src={imac}
+              width='32px'
+              height='32px'
+              alt='Pracownik biurowy'
+            />
             <h3>Pracownik biurowy</h3>
             <p>
               Szkolenie dla pracowników biurowych, obejmuje m.in: • Pakiet
@@ -116,7 +136,12 @@ const Szkolenia = () => {
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={workstation} width='32' alt='' />
+            <img
+              src={workstation}
+              width='32px'
+              height='32px'
+              alt='Kurs komputerowy PKK'
+            />
             <h3>Kurs komputerowy PKK</h3>
             <p>
               Podstawowy Kurs Komputerowy to nasz autorski program. Dobraliśmy

@@ -1,5 +1,5 @@
 import { Facebook, Instagram } from 'iconsax-react';
-import linkedinIcon from '../../Assets/linkedin-icon.png';
+import linkedinIcon from '../../Assets/linkedin-icon.webp';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -12,13 +12,13 @@ const Footer = () => {
       </section>
       <section className={styles['social-media']}>
         <a href='a'>
-          <img src={linkedinIcon} alt='' width='40px'/>
+          <img src={linkedinIcon} alt='LinkedIn' width='40px' />
         </a>
         <a href='a'>
-          <Facebook size="40"/>
+          <Facebook size='40' />
         </a>
         <a href='a'>
-          <Instagram size="40" />
+          <Instagram size='40' />
         </a>
       </section>
     </div>
