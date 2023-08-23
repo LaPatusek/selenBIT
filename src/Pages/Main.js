@@ -26,41 +26,51 @@ const Main = () => {
 
         <div className={styles['second-section-boxes']}>
           <div className={styles['content-box']}>
-            <img src={firstIcon} alt='' width='110px' />
-            <h3>Jesteśmy mobilni</h3>
-            <h2>Przyjedziemy do Ciebie</h2>
-            <p>
-              Zajęcia prowadzimy lokalnie, nasi trenerzy trafią w wyznaczone
-              miejsce. Oferujemy także szkolenia zdalne.
-            </p>
+            <div className={styles['flex-wrap']}>
+              <img src={firstIcon} alt='Jesteśmy mobilni' width='110px' />
+              <h3>Jesteśmy mobilni</h3>
+              <h2>Przyjedziemy do Ciebie</h2>
+              <p>
+                Zajęcia prowadzimy lokalnie, nasi trenerzy trafią w wyznaczone
+                miejsce. Oferujemy także szkolenia zdalne.
+              </p>
+            </div>
           </div>
           <div className={styles['content-box']}>
-            <img src={secondIcon} alt='' width='110px' />
-            <h3>Dopasujemy się do Ciebie</h3>
-            <h2>Spełnimy Twoje oczekiwania</h2>
-            <p>
-              Szkolenia opracowujemy i dopasowujemy do Twoich i Twojej firmy
-              potrzeb.
-            </p>
+            <div className={styles['flex-wrap']}>
+              <img
+                src={secondIcon}
+                alt='Dopasujemy się do Ciebie'
+                width='110px'
+              />
+              <h3>Dopasujemy się do Ciebie</h3>
+              <h2>Spełnimy Twoje oczekiwania</h2>
+              <p>
+                Szkolenia opracowujemy i dopasowujemy do Twoich i Twojej firmy
+                potrzeb.
+              </p>
+            </div>
           </div>
           <div className={styles['content-box']}>
-            <img src={thirdIcon} alt='' width='110px' />
-            <h3>Inwidualne podejście</h3>
-            <h2>Dopasujemy się do poziomu </h2>
-            <p>
-              Wiemy, że szkolenia spotykają się ze zróżnicowaną potrzebą
-              uczestników. Bez obaw. Dostoujemy się.
-            </p>
+            <div className={styles['flex-wrap']}>
+              <img src={thirdIcon} alt='Inwidualne podejście' width='110px' />
+              <h3>Inwidualne podejście</h3>
+              <h2>Dopasujemy się do poziomu </h2>
+              <p>
+                Wiemy, że szkolenia spotykają się ze zróżnicowaną potrzebą
+                uczestników. Bez obaw. Dostoujemy się.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className={styles['fourth-section']}>
         <h3>SelenBit - Przekazujemy wiedzę</h3>
-        <h2>
+        <h4>
           Pomożemy Ci rozwinąć posiadane umiejętności, aby sprostać współczesnym
           wymaganiom cyfryzacji.
-        </h2>
+        </h4>
         <Link to='/cennik' className={styles['fourth-section--button']}>
           Wyceń szkolenie
         </Link>

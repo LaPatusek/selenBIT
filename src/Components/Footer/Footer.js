@@ -11,13 +11,25 @@ const Footer = () => {
         </h1>
       </section>
       <section className={styles['social-media']}>
-        <a href='a'>
-          <img src={linkedinIcon} alt='LinkedIn' width='40px' />
+        <a
+          href='https://www.linkedin.com/in/eryk-trojanowski-7678ab120/'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img src={linkedinIcon} alt='LinkedIn' width='40px' height='40px' />
         </a>
-        <a href='a'>
+        <a
+          href='https://www.facebook.com/ErykTrojanowski'
+          target='_blank'
+          rel='noreferrer'
+        >
           <Facebook size='40' />
         </a>
-        <a href='a'>
+        <a
+          href='https://www.instagram.com/eryk7777/'
+          target='_blank'
+          rel='noreferrer'
+        >
           <Instagram size='40' />
         </a>
       </section>

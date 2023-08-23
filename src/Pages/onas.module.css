@@ -91,6 +91,7 @@
   padding: 12px;
   padding-right: 24px;
   padding-left: 24px;
+  transition: all 0.4s;
 }
 
 .right-section--contact-link svg {
@@ -100,7 +101,6 @@
 .right-section--contact-link:hover,
 .right-section--contact-link:active {
   cursor: pointer;
-  transition: 0.4s;
   color: #ffab00;
   background-color: transparent;
 }

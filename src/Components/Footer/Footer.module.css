@@ -29,19 +29,12 @@
 
 .social-media img {
   background-color: white;
-  padding: 0;
+  transition: all 0.3s;
 }
 
 .social-media img:hover,
 .social-media img:active {
-  transition: 0.3s;
   background-color: var(--light-brown);
-}
-
-.social-media a:hover,
-.social-media a:active {
-  transition: 0.3s;
-  color: var(--light-brown);
 }
 
 @media screen and (max-width: 800px) {
@@ -53,10 +46,12 @@
     padding: 1rem;
     padding-bottom: 10rem;
   }
+
   .first-section {
     width: 100%;
     margin-bottom: 15px;
   }
+
   .social-media {
     margin-left: 2rem;
     width: 100%;

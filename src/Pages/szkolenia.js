@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import c from '../Assets/C++_Logo.webp';
 import ict from '../Assets/ICT-logo.webp';
 import android from '../Assets/android-logo.webp';
@@ -23,8 +24,8 @@ const Szkolenia = () => {
           <div className={styles['main-section-container']}>
             <img
               src={cyfryzacja}
-              width='32px'
-              height='32px'
+              width='56px'
+              height='56px'
               alt='Cyfryzacja 2.0'
             />
             <h3>Cyfryzacja 2.0</h3>
@@ -36,20 +37,22 @@ const Szkolenia = () => {
               nieunikniona, co więcej sprawia, że wykonywana praca będzie
               bardziej efektywna. Nie czekaj, przyszłość zaczyna się dziś.
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={java} width='32px' height='32px' alt='Java' />
+            <img src={java} width='56px' height='56px' alt='Java' />
             <h3>Java</h3>
             <p>
               Jak wskazują statystyki język programowania JAVA jest wciąż
               aktualnym i stabilnym językiem programowania. Zostań z programistą
               z nami już teraz!
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={android} width='32px' height='32px' alt='Android' />
+            <img src={android} width='56px' height='56px' alt='Android' />
             <h3>Android</h3>
             <p>
               Aplikacja mobilna stała się nieodłącznym elementem naszego życia.
@@ -57,13 +60,14 @@ const Szkolenia = () => {
               zapotrzebowanie na programistów w tej branży. Przygotujemy Cię do
               pracy programisty!.
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
 
           <div className={styles['main-section-container']}>
             <img
               src={web}
-              width='32px'
-              height='32px'
+              width='56px'
+              height='56px'
               alt='Tworzenie stron WWW'
             />
             <h3>Tworzenie stron WWW</h3>
@@ -73,16 +77,18 @@ const Szkolenia = () => {
               Script. Uczymy także jak korzystać z gotowych rozwiązań CMS typu
               WordPress.
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={ecdl} width='32px' height='32px' alt='ECDL' />
+            <img src={ecdl} width='56px' height='56px' alt='ECDL' />
             <h3>ECDL</h3>
             <p>
               Przygotujemy Cię do zdania egzaminu ECDL – Europejski Certyfikat
               Umiejętności Komputerowych. Przygotujemy także cały egzamin. – Na
               każdym poziomie.
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
         </div>
 
@@ -90,8 +96,8 @@ const Szkolenia = () => {
           <div className={styles['main-section-container']}>
             <img
               src={ict}
-              width='32px'
-              height='32px'
+              width='56px'
+              height='56px'
               alt='Technologie informacyjno-komunikacyjne'
             />
             <h3>Technologie informacyjno-komunikacyjne (TIK)</h3>
@@ -105,10 +111,11 @@ const Szkolenia = () => {
               Narzędzia Google Prowadzenie prostego bloga / strony
               informacyjnej.
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
 
           <div className={styles['main-section-container']}>
-            <img src={c} width='32px' height='32px' alt='C++' />
+            <img src={c} width='56px' height='56px' alt='C++' />
             <h3>C++</h3>
             <p>
               Nasza firma prowadzi szkolenia z środowiska C++. Język
@@ -116,13 +123,14 @@ const Szkolenia = () => {
               całym świecie. Nasi instruktorzy krok po kroku przeprowadzą Cię
               przez naukę tego języka
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
 
           <div className={styles['main-section-container']}>
             <img
               src={imac}
-              width='32px'
-              height='32px'
+              width='56px'
+              height='56px'
               alt='Pracownik biurowy'
             />
             <h3>Pracownik biurowy</h3>
@@ -133,13 +141,14 @@ const Szkolenia = () => {
               chmury w przedsiębiorstwie • Zarządzanie dokumentami •
               Bezpieczeństwo i poufność • Social Media
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
 
           <div className={styles['main-section-container']}>
             <img
               src={workstation}
-              width='32px'
-              height='32px'
+              width='56px'
+              height='56px'
               alt='Kurs komputerowy PKK'
             />
             <h3>Kurs komputerowy PKK</h3>
@@ -153,6 +162,7 @@ const Szkolenia = () => {
               kursu. Dla chętnych możliwość podejścia do egzaminu
               kwalifikacyjnego.
             </p>
+            <Link to=''>Zobacz więcej</Link>
           </div>
         </div>
       </section>

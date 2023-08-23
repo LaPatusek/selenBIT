@@ -3,15 +3,11 @@
   max-width: 350px;
 }
 
-.blockquote {
-  position: relative;
-}
-
 .blockquote h1 {
   position: relative;
   color: var(--light-brown);
   font-size: 1.2rem;
-  line-height: 1;
+  letter-spacing: 0.4px;
   border: solid 2px;
   border-radius: 20px;
   padding: 25px;
@@ -42,20 +38,20 @@
 }
 
 .blockquote h4 {
-  position: relative;
   color: #ffffff;
   font-size: 1.3rem;
-  font-weight: 400;
   line-height: 1.2;
-  margin: 0;
   padding-top: 15px;
-  z-index: 1;
   margin-left: 150px;
   padding-left: 12px;
 }
 
 .blockquote h4:first-letter {
   margin-left: -12px;
+}
+
+.blockquote span {
+  padding-left: 16px;
 }
 
 @media screen and (max-width: 800px) {

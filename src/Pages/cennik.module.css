@@ -138,11 +138,11 @@
   background-color: var(--orange);
   border-radius: 2px;
   cursor: pointer;
+  transition: all 0.45s;
 }
 
 .right-section button:hover {
   background-color: transparent;
-  transition: 0.3s;
   border: 2px solid var(--orange);
   color: var(--orange);
 }

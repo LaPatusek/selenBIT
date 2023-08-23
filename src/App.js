@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Fragment, useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Main from './Pages/Main';
@@ -9,6 +9,22 @@ import Onas from './Pages/onas';
 import Szkolenia from './Pages/szkolenia';
 
 const App = () => {
+  const { pathname, hash, key } = useLocation();
+
+  useEffect(() => {
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    } else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]);
+
   return (
     <Fragment>
       <header>
