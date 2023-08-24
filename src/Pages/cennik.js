@@ -1,8 +1,30 @@
 import { Briefcase, Call } from 'iconsax-react';
+import { useState } from 'react';
 import useInput from '../Components/hooks/useInput';
 import styles from './cennik.module.css';
 
 const Cennik = () => {
+  const [cateringState, setCateringState] = useState(false);
+  const [egzaminState, setEgzaminState] = useState(false);
+  const [salaState, setSalaState] = useState(false);
+  const [materialsState, setMaterialsState] = useState(false);
+
+  const materialsFunction = () => {
+    setMaterialsState(!materialsState);
+  };
+
+  const SalaFunction = () => {
+    setSalaState(!salaState);
+  };
+
+  const egzaminFunction = () => {
+    setEgzaminState(!egzaminState);
+  };
+
+  const cateringFunction = () => {
+    setCateringState(!cateringState);
+  };
+
   const {
     value: enteredName,
     isValid: nameIsValid,
@@ -175,14 +197,84 @@ const Cennik = () => {
             <br />
             Opcje dodatkowe:
             <div className={styles['form-checkboxes']}>
-              <input type='checkbox' id='catering' />
-              <label htmlFor='catering'>Catering </label> <br />
-              <input type='checkbox' id='sala' />
-              <label htmlFor='sala'>Sala szkoleniowa </label> <br />
-              <input type='checkbox' id='egzamin' />
-              <label htmlFor='egzamin'>Egzamin</label> <br />
-              <input type='checkbox' id='materialy' />
-              <label htmlFor='materialy'>Materiały</label> <br />
+              <div className={styles['checkbox-container']}>
+                <label htmlFor='catering' className={`${styles.check} flex`}>
+                  <input
+                    type='checkbox'
+                    id='catering'
+                    name='catering'
+                    checked={cateringState}
+                    onChange={cateringFunction}
+                  />
+                  <svg viewBox='0 0 64 64' height='16px' width='16px'>
+                    <path
+                      d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
+                      pathLength='575.0541381835938'
+                      className={styles.path}
+                    ></path>
+                  </svg>
+                  <p>Catering</p>
+                </label>
+              </div>
+
+              <div className={styles['checkbox-container']}>
+                <label htmlFor='sala' className={`${styles.check} flex`}>
+                  <input
+                    type='checkbox'
+                    id='sala'
+                    name='sala'
+                    checked={salaState}
+                    onChange={SalaFunction}
+                  />
+                  <svg viewBox='0 0 64 64' height='16px' width='16px'>
+                    <path
+                      d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
+                      pathLength='575.0541381835938'
+                      className={styles.path}
+                    ></path>
+                  </svg>
+                  <p>Sala szkoleniowa</p>
+                </label>
+              </div>
+
+              <div className={styles['checkbox-container']}>
+                <label htmlFor='egzamin' className={`${styles.check} flex`}>
+                  <input
+                    type='checkbox'
+                    id='egzamin'
+                    name='egzamin'
+                    checked={egzaminState}
+                    onChange={egzaminFunction}
+                  />
+                  <svg viewBox='0 0 64 64' height='16px' width='16px'>
+                    <path
+                      d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
+                      pathLength='575.0541381835938'
+                      className={styles.path}
+                    ></path>
+                  </svg>
+                  <p>Egzamin</p>
+                </label>
+              </div>
+              <div className={styles['checkbox-container']}>
+                <label htmlFor='materialy' className={`${styles.check} flex`}>
+                  <input
+                    type='checkbox'
+                    id='materialy'
+                    name='materials'
+                    checked={materialsState}
+                    onChange={materialsFunction}
+                  />
+                  <svg viewBox='0 0 64 64' height='16px' width='16px'>
+                    <path
+                      d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
+                      pathLength='575.0541381835938'
+                      className={styles.path}
+                    ></path>
+                  </svg>
+                  <p>Materiały</p>
+                </label>
+              </div>
             </div>
             <button>Wyślij</button>
           </form>

@@ -107,23 +107,6 @@
   color: #979294;
 }
 
-.form-checkboxes {
-  padding-top: 0.3rem;
-  padding-bottom: 0.2rem;
-  display: flex;
-}
-
-.form-checkboxes label {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.form-checkboxes input[type='checkbox'] {
-  width: 1.2em;
-  height: 1.2em;
-  transform: translateY(-0.075em);
-}
-
 .right-section button {
   font-weight: bold;
   text-transform: uppercase;
@@ -150,6 +133,53 @@
 .input-error {
   color: #d71f1f;
   letter-spacing: 0.3px;
+}
+
+.checkbox-container {
+  margin-top: 3px;
+}
+
+.check {
+  cursor: pointer;
+}
+
+.check input {
+  display: none;
+}
+
+.check svg {
+  overflow: visible;
+  transform: translateY(2px);
+}
+
+.path {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.check input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
+
+.check p {
+  margin-left: 0.6em;
+  font-size: 18px;
+  color: white;
+}
+
+.checkbox-container a {
+  color: #48f0a1;
+}
+
+.checkbox-error .path {
+  stroke: red;
 }
 
 @media screen and (max-width: 800px) {
