@@ -97,189 +97,198 @@ const Cennik = () => {
   };
 
   return (
-    <div className={styles['background-image']}>
-      <div className={styles.wrap}>
-        <section className={styles['left-section']}>
-          <h1>
-            Skontaktuj się <br /> i zapytaj o cenę
-          </h1>
-          <hr />
-          <div className={styles['contact-block']}>
-            <div className={styles.icon}>
-              <Call variant='Bold' />
-            </div>
-            <h2>Telefon</h2>
-            <p> +48 531 771 944 </p>
+    <div className={styles.wrap}>
+      <section className={styles['left-section']}>
+        <h1>
+          Skontaktuj się <br /> i zapytaj o cenę
+        </h1>
+        <hr />
+        <div className={styles['contact-block']}>
+          <div className={styles.icon}>
+            <Call variant='Bold' />
           </div>
+          <h2>Telefon</h2>
+          <p> +48 531 771 944 </p>
+        </div>
 
-          <div className={styles['contact-block']}>
-            <div className={styles.icon}>
-              <Briefcase variant='Bold' />
-            </div>
-            <h2> Email</h2>
-            <p> eryktrojanowski@gmail.com </p>
+        <div className={styles['contact-block']}>
+          <div className={styles.icon}>
+            <Briefcase variant='Bold' />
           </div>
-        </section>
+          <h2> Email</h2>
+          <p> eryktrojanowski@gmail.com </p>
+        </div>
+      </section>
 
-        <section className={styles['right-section']}>
-          <h2>WYŚLIJ ZAPYTANIE O CENĘ SZKOLENIA</h2>
-          <form onSubmit={submitHandler}>
-            <label htmlFor='name'>Imię i nazwisko</label> <br />
+      <section className={styles['right-section']}>
+        <h2>WYŚLIJ ZAPYTANIE O CENĘ SZKOLENIA</h2>
+        <form onSubmit={submitHandler}>
+          <div
+            className={`${styles['input-group']} ${
+              nameHasError ? styles['input-error'] : ''
+            }`}
+          >
             <input
               type='text'
+              name='text'
               id='name'
+              autoComplete='off'
+              className={styles.input}
               onChange={nameChangeHandler}
               onBlur={nameBlurHandler}
               value={enteredName}
-              placeholder='Imię i nazwisko'
             />
-            {nameHasError && (
-              <p className={styles['input-error']}>Wprowadź imie i nazwisko!</p>
-            )}
-            <br />
-            <label htmlFor='topic'>Temat</label>
-            <br />
+            <label className={styles['user-label']} htmlFor='name'>Imię i nazwisko</label>
+          </div>
+          <div
+            className={`${styles['input-group']} ${
+              topicHasError ? styles['input-error'] : ''
+            }`}
+          >
             <input
               type='text'
               id='topic'
+              autoComplete='off'
+              className={styles.input}
               onChange={topicChangeHandler}
               onBlur={topicBlurHandler}
               value={enteredTopic}
-              placeholder='Temat'
             />
-            {topicHasError && (
-              <p className={styles['input-error']}>Wprowadź temat!</p>
-            )}
-            <br />
-            <label htmlFor='email'>Adres email</label>
-            <br />
+            <label className={styles['user-label']} htmlFor='topic'>Temat</label>
+          </div>
+          <div
+            className={`${styles['input-group']} ${
+              mailHasError ? styles['input-error'] : ''
+            }`}
+          >
             <input
               type='email'
               id='email'
+              autoComplete='off'
               onChange={mailChangeHandler}
               onBlur={mailBlurHandler}
               value={enteredMail}
-              placeholder='Adres email'
+              className={styles.input}
             />
-            {mailHasError && (
-              <p className={styles['input-error']}>
-                Wprowadź prawidłowy email!
-              </p>
-            )}
-            <br />
-            <label htmlFor='time'>Ilość godzin (45min)</label>
-            <br />
+            <label className={styles['user-label']} htmlFor='email'>Adres email</label>
+          </div>
+          <div
+            className={`${styles['input-group']} ${
+              timeHasError ? styles['input-error'] : ''
+            }`}
+          >
             <input
               type='number'
               id='time'
+              autoComplete='off'
               onChange={timeChangeHandler}
               onBlur={timeBlurHandler}
               value={enteredTime}
-              placeholder='1'
+              className={styles.input}
             />
-            {timeHasError && (
-              <p className={styles['input-error']}>Wprowadź ilość godzin!</p>
-            )}
-            <br />
-            <label htmlFor='requirements'>Wymagania dotyczące szkolenia</label>
-            <br />
+            <label className={styles['user-label']} htmlFor='time'>Ilość godzin (45min)</label>
+          </div>
+          <div
+            className={`${styles['input-group']} ${
+              requirementsHasError ? styles['input-error'] : ''
+            }`}
+          >
             <textarea
               type='textarea'
               id='requirements'
+              autoComplete='off'
               onChange={requirementsChangeHandler}
               onBlur={requirementsBlurHandler}
               value={enteredRequirements}
+              className={`${styles.input}`}
               placeholder='Napisz czego ma dotyczyć szkolenie, kto jest odbiorcą i ile osób ma zostać przeszkolonych, a także inne szczególne zamówienia.'
             />
-            {requirementsHasError && (
-              <p className={styles['input-error']}>Wprowadź wiadomość!</p>
-            )}
-            <br />
-            Opcje dodatkowe:
-            <div className={styles['form-checkboxes']}>
-              <div className={styles['checkbox-container']}>
-                <label htmlFor='catering' className={`${styles.check} flex`}>
-                  <input
-                    type='checkbox'
-                    id='catering'
-                    name='catering'
-                    checked={cateringState}
-                    onChange={cateringFunction}
-                  />
-                  <svg viewBox='0 0 64 64' height='16px' width='16px'>
-                    <path
-                      d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
-                      pathLength='575.0541381835938'
-                      className={styles.path}
-                    ></path>
-                  </svg>
-                  <p>Catering</p>
-                </label>
-              </div>
-
-              <div className={styles['checkbox-container']}>
-                <label htmlFor='sala' className={`${styles.check} flex`}>
-                  <input
-                    type='checkbox'
-                    id='sala'
-                    name='sala'
-                    checked={salaState}
-                    onChange={SalaFunction}
-                  />
-                  <svg viewBox='0 0 64 64' height='16px' width='16px'>
-                    <path
-                      d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
-                      pathLength='575.0541381835938'
-                      className={styles.path}
-                    ></path>
-                  </svg>
-                  <p>Sala szkoleniowa</p>
-                </label>
-              </div>
-
-              <div className={styles['checkbox-container']}>
-                <label htmlFor='egzamin' className={`${styles.check} flex`}>
-                  <input
-                    type='checkbox'
-                    id='egzamin'
-                    name='egzamin'
-                    checked={egzaminState}
-                    onChange={egzaminFunction}
-                  />
-                  <svg viewBox='0 0 64 64' height='16px' width='16px'>
-                    <path
-                      d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
-                      pathLength='575.0541381835938'
-                      className={styles.path}
-                    ></path>
-                  </svg>
-                  <p>Egzamin</p>
-                </label>
-              </div>
-              <div className={styles['checkbox-container']}>
-                <label htmlFor='materialy' className={`${styles.check} flex`}>
-                  <input
-                    type='checkbox'
-                    id='materialy'
-                    name='materials'
-                    checked={materialsState}
-                    onChange={materialsFunction}
-                  />
-                  <svg viewBox='0 0 64 64' height='16px' width='16px'>
-                    <path
-                      d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
-                      pathLength='575.0541381835938'
-                      className={styles.path}
-                    ></path>
-                  </svg>
-                  <p>Materiały</p>
-                </label>
-              </div>
+            <label className={styles['user-label']} htmlFor='requirements'>Twoja wiadomość</label>
+          </div>
+          Opcje dodatkowe:
+          <div className={styles['form-checkboxes']}>
+            <div className={styles['checkbox-container']}>
+              <label htmlFor='catering' className={`${styles.check} flex`}>
+                <input
+                  type='checkbox'
+                  id='catering'
+                  name='catering'
+                  checked={cateringState}
+                  onChange={cateringFunction}
+                />
+                <svg viewBox='0 0 64 64' height='18px' width='18px'>
+                  <path
+                    d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
+                    pathLength='575.0541381835938'
+                    className={styles.path}
+                  ></path>
+                </svg>
+                <p>Catering</p>
+              </label>
             </div>
-            <button>Wyślij</button>
-          </form>
-        </section>
-      </div>
+
+            <div className={styles['checkbox-container']}>
+              <label htmlFor='sala' className={`${styles.check} flex`}>
+                <input
+                  type='checkbox'
+                  id='sala'
+                  name='sala'
+                  checked={salaState}
+                  onChange={SalaFunction}
+                />
+                <svg viewBox='0 0 64 64' height='18px' width='18px'>
+                  <path
+                    d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
+                    pathLength='575.0541381835938'
+                    className={styles.path}
+                  ></path>
+                </svg>
+                <p>Sala szkoleniowa</p>
+              </label>
+            </div>
+
+            <div className={styles['checkbox-container']}>
+              <label htmlFor='egzamin' className={`${styles.check} flex`}>
+                <input
+                  type='checkbox'
+                  id='egzamin'
+                  name='egzamin'
+                  checked={egzaminState}
+                  onChange={egzaminFunction}
+                />
+                <svg viewBox='0 0 64 64' height='18px' width='18px'>
+                  <path
+                    d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
+                    pathLength='575.0541381835938'
+                    className={styles.path}
+                  ></path>
+                </svg>
+                <p>Egzamin</p>
+              </label>
+            </div>
+            <div className={styles['checkbox-container']}>
+              <label htmlFor='materialy' className={`${styles.check} flex`}>
+                <input
+                  type='checkbox'
+                  id='materialy'
+                  name='materials'
+                  checked={materialsState}
+                  onChange={materialsFunction}
+                />
+                <svg viewBox='0 0 64 64' height='18px' width='18px'>
+                  <path
+                    d='M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16'
+                    pathLength='575.0541381835938'
+                    className={styles.path}
+                  ></path>
+                </svg>
+                <p>Materiały</p>
+              </label>
+            </div>
+          </div>
+          <button>Wyślij</button>
+        </form>
+      </section>
     </div>
   );
 };

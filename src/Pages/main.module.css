@@ -41,8 +41,8 @@
   text-align: center;
   width: 33%;
   max-width: 400px;
-  background-color: #151d28;
-  box-shadow: 8px 10px 20px 0.3px #0e141b;
+  background-color: #192431;
+  box-shadow: 8px 10px 20px 0.3px #192431;
   margin: 10px;
   margin-left: 30px;
   margin-right: 30px;
@@ -132,10 +132,13 @@
 }
 
 .fourth-section--button {
-  border: 1px solid #151d28;
-  background-color: #151d28;
-  box-shadow: 5px 5px 15px #151d28;
+  border: 1px solid #192431;
+  background-color: #192431;
+  box-shadow: 5px 5px 15px #192431;
   border-radius: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: .7px;
   padding: 13px 15px 13px 15px;
   text-transform: uppercase;
   color: white;

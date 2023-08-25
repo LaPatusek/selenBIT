@@ -84,63 +84,79 @@ const Kontakt = () => {
         <section className={styles['right-section']}>
           <h2>Wyślij zapytanie</h2>
           <form onSubmit={submitHandler}>
-            <label htmlFor='name'>Imię i nazwisko</label> <br />
-            <input
-              type='text'
-              id='name'
-              onChange={nameChangeHandler}
-              onBlur={nameBlurHandler}
-              value={enteredName}
-              placeholder='Imię i nazwisko'
-            />
-            {nameHasError && (
-              <p className={styles['input-error']}>Wprowadź imie i nazwisko!</p>
-            )}
-            <br />
-            <label htmlFor='topic'>Temat</label>
-            <br />
-            <input
-              type='text'
-              id='topic'
-              onChange={topicChangeHandler}
-              onBlur={topicBlurHandler}
-              value={enteredTopic}
-              placeholder='Temat'
-            />
-            {topicHasError && (
-              <p className={styles['input-error']}>Wprowadź temat!</p>
-            )}
-            <br />
-            <label htmlFor='email'>Adres email</label>
-            <br />
-            <input
-              type='email'
-              id='email'
-              onChange={mailChangeHandler}
-              onBlur={mailBlurHandler}
-              value={enteredMail}
-              placeholder='Adres email'
-            />
-            {mailHasError && (
-              <p className={styles['input-error']}>
-                Wprowadź prawidłowy email!
-              </p>
-            )}
-            <br />
-            <label htmlFor='message'>Wiadomość</label>
-            <br />
-            <textarea
-              type='textarea'
-              id='message'
-              onChange={messageChangeHandler}
-              onBlur={messageBlurHandler}
-              value={enteredMessage}
-              placeholder='Treść wiadomości...'
-            />
-            {messageHasError && (
-              <p className={styles['input-error']}>Wprowadź wiadomość!</p>
-            )}
-            <br />
+            <div
+              className={`${styles['input-group']} ${
+                nameHasError ? styles['input-error'] : ''
+              }`}
+            >
+              <input
+                type='text'
+                name='text'
+                id='name'
+                autoComplete='off'
+                className={styles.input}
+                onChange={nameChangeHandler}
+                onBlur={nameBlurHandler}
+                value={enteredName}
+              />
+              <label className={styles['user-label']} htmlFor='name'>
+                Imię i nazwisko
+              </label>
+            </div>
+            <div
+              className={`${styles['input-group']} ${
+                topicHasError ? styles['input-error'] : ''
+              }`}
+            >
+              <input
+                type='text'
+                id='topic'
+                autoComplete='off'
+                className={styles.input}
+                onChange={topicChangeHandler}
+                onBlur={topicBlurHandler}
+                value={enteredTopic}
+              />
+              <label className={styles['user-label']} htmlFor='topic'>
+                Temat
+              </label>
+            </div>
+            <div
+              className={`${styles['input-group']} ${
+                mailHasError ? styles['input-error'] : ''
+              }`}
+            >
+              <input
+                type='email'
+                id='email'
+                autoComplete='off'
+                onChange={mailChangeHandler}
+                onBlur={mailBlurHandler}
+                value={enteredMail}
+                className={styles.input}
+              />
+              <label className={styles['user-label']} htmlFor='email'>
+                Adres email
+              </label>
+            </div>
+            <div
+              className={`${styles['input-group']} ${
+                messageHasError ? styles['input-error'] : ''
+              }`}
+            >
+              <textarea
+                type='textarea'
+                id='requirements'
+                autoComplete='off'
+                onChange={messageChangeHandler}
+                onBlur={messageBlurHandler}
+                value={enteredMessage}
+                className={`${styles.input}`}
+              />
+              <label className={styles['user-label']} htmlFor='requirements'>
+                Twoja wiadomość
+              </label>
+            </div>
             <button>Wyślij</button>
           </form>
         </section>
