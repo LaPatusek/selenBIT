@@ -1,7 +1,7 @@
 import { Fragment, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
+import Nav from './Components/Nav/Nav';
 import Main from './Pages/Main';
 import Cennik from './Pages/cennik';
 import Kontakt from './Pages/kontakt';
@@ -28,7 +28,7 @@ const App = () => {
   return (
     <Fragment>
       <header>
-        <Header />
+        <Nav />
       </header>
 
       <main>

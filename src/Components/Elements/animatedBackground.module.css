@@ -2,7 +2,6 @@
   height: 200vh;
   width: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
   position: relative;
 }
 
@@ -483,7 +482,7 @@
 
 .higher-text svg {
   transform: translateY(5px);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .higher-text a:hover svg {

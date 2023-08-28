@@ -123,6 +123,10 @@
   color: var(--orange);
 }
 
+.input-error input:valid ~ label {
+  color: #d71f1f;
+}
+
 .right-section textarea {
   resize: none;
   height: 6rem;

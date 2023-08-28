@@ -107,6 +107,10 @@
   border: 1.5px solid #d71f1f !important;
 }
 
+.input-error input:valid ~ label {
+  color: #d71f1f;
+}
+
 .input:focus ~ label,
 .input:valid ~ label {
   letter-spacing: 0.3px;
