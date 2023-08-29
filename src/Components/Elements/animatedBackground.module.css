@@ -532,7 +532,8 @@
   transition: all 0.4s;
 }
 
-.main-button:hover {
+.main-button:hover,
+.main-button:active {
   background: transparent;
 }
 
@@ -554,11 +555,16 @@
     margin-bottom: 10px;
   }
 
+  .text h2 {
+    font-size: 3rem;
+  }
+
   .text h1 {
     letter-spacing: 4px;
   }
 
   .main-button {
     margin-top: 35px;
+    padding: 13px 50px 13px 50px;
   }
 }

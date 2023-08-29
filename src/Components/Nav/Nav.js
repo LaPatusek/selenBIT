@@ -1,5 +1,5 @@
-import { HambergerMenu } from 'iconsax-react';
-import { useEffect, useState } from 'react';
+import { Star1 } from 'iconsax-react';
+import { Fragment, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Logo from '../../Assets/cropped-logo11-300x147.webp';
 import styles from './Nav.module.css';
@@ -20,64 +20,72 @@ const Nav = () => {
   }, [pathname]);
 
   return (
-    <div
-      className={`${styles.header} ${mainPageState ? styles['main-navbar'] : ''}`}
-    >
-      <NavLink to='/main'>
-        <img src={Logo} alt='logo' />
-      </NavLink>
+    <Fragment>
+      <div
+        className={`${styles.header} ${
+          mainPageState ? styles['main-navbar'] : ''
+        }`}
+      >
+        <NavLink to='/main'>
+          <img src={Logo} alt='logo' />
+        </NavLink>
 
-      <div className={`${styles.nav}`}>
-        <div className={styles['nav-links']}>
-          <NavLink
-            to='/main'
-            className={({ isActive, isPending }) =>
-              isPending ? 'pending' : isActive ? 'active' : ''
-            }
-          >
-            Strona główna
-          </NavLink>
-          <NavLink
-            to='/szkolenia'
-            className={({ isActive, isPending }) =>
-              isPending ? 'pending' : isActive ? 'active' : ''
-            }
-          >
-            Szkolenia
-          </NavLink>
-          <NavLink
-            to='/cennik'
-            className={({ isActive, isPending }) =>
-              isPending ? 'pending' : isActive ? 'active' : ''
-            }
-          >
-            Cennik
-          </NavLink>
-          <NavLink
-            to='/o-nas'
-            className={({ isActive, isPending }) =>
-              isPending ? 'pending' : isActive ? 'active' : ''
-            }
-          >
-            O nas
-          </NavLink>
-          <NavLink
-            to='/kontakt'
-            className={({ isActive, isPending }) =>
-              isPending ? 'pending' : isActive ? 'active' : ''
-            }
-          >
-            Kontakt
-          </NavLink>
-        </div>
-        <div className={styles['nav-menu']}>
-          <div className={styles['hamburger-menu-icon']} onClick={menuHandler}>
-            <HambergerMenu size='32' />
+        <div className={`${styles.nav}`}>
+          <div className={styles['nav-links']}>
+            <NavLink
+              to='/main'
+              className={({ isActive, isPending }) =>
+                isPending ? 'pending' : isActive ? 'active' : ''
+              }
+            >
+              Strona główna
+            </NavLink>
+            <NavLink
+              to='/szkolenia'
+              className={({ isActive, isPending }) =>
+                isPending ? 'pending' : isActive ? 'active' : ''
+              }
+            >
+              Szkolenia
+            </NavLink>
+            <NavLink
+              to='/cennik'
+              className={({ isActive, isPending }) =>
+                isPending ? 'pending' : isActive ? 'active' : ''
+              }
+            >
+              Cennik
+            </NavLink>
+            <NavLink
+              to='/o-nas'
+              className={({ isActive, isPending }) =>
+                isPending ? 'pending' : isActive ? 'active' : ''
+              }
+            >
+              O nas
+            </NavLink>
+            <NavLink
+              to='/kontakt'
+              className={({ isActive, isPending }) =>
+                isPending ? 'pending' : isActive ? 'active' : ''
+              }
+            >
+              Kontakt
+            </NavLink>
           </div>
+        </div>
+      </div>
+      <div className={styles['navbar-800']}>
+        <img src={Logo} alt='logo' />
 
-          {menuIsVis && (
-            <div className={styles['nav-menu-800']}>
-              <ul>
+        <div className={styles['hamburger-menu-icon']} onClick={menuHandler}>
+          <Star1 size='32' variant='Bold' />
+        </div>
+
+        {menuIsVis && (
+          <div className={styles['nav-menu-800']}>
+            <ul>
+              <li>
                 <NavLink
                   to='/main'
                   className={({ isActive, isPending }) =>
@@ -85,9 +93,11 @@ const Nav = () => {
                   }
                   onClick={menuHandler}
                 >
-                  <li>Strona główna</li>
+                  Strona główna
                 </NavLink>
+              </li>
 
+              <li>
                 <NavLink
                   to='/szkolenia'
                   className={({ isActive, isPending }) =>
@@ -95,9 +105,11 @@ const Nav = () => {
                   }
                   onClick={menuHandler}
                 >
-                  <li>Szkolenia</li>
+                  szkolenia
                 </NavLink>
+              </li>
 
+              <li>
                 <NavLink
                   to='/cennik'
                   className={({ isActive, isPending }) =>
@@ -105,9 +117,11 @@ const Nav = () => {
                   }
                   onClick={menuHandler}
                 >
-                  <li> Cennik </li>
+                  Cennik
                 </NavLink>
+              </li>
 
+              <li>
                 <NavLink
                   to='/o-nas'
                   className={({ isActive, isPending }) =>
@@ -115,9 +129,11 @@ const Nav = () => {
                   }
                   onClick={menuHandler}
                 >
-                  <li> O nas </li>
+                  O nas
                 </NavLink>
+              </li>
 
+              <li>
                 <NavLink
                   to='/kontakt'
                   className={({ isActive, isPending }) =>
@@ -125,14 +141,14 @@ const Nav = () => {
                   }
                   onClick={menuHandler}
                 >
-                  <li>Kontakt </li>
+                  kontakt
                 </NavLink>
-              </ul>
-            </div>
-          )}
-        </div>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
-    </div>
+    </Fragment>
   );
 };
 

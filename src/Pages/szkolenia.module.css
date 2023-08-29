@@ -1,6 +1,5 @@
 .background {
   padding: 5% 0 5% 0;
-  background-color: #1d1d1d;
   box-sizing: border-box;
 }
 
@@ -8,13 +7,16 @@
   padding: 2rem;
   display: block;
   text-align: center;
+  position: relative;
 }
 
 .page-title h3 {
+  user-select: none;
+  position: relative;
   text-transform: uppercase;
   padding-bottom: 15px;
   font-size: 1.6rem;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   font-weight: bold;
 }
 
@@ -40,7 +42,9 @@
 }
 
 .page-title h1 {
+  user-select: none;
   font-size: 3rem;
+  letter-spacing: 0.6px;
 }
 
 .main-section {
@@ -56,23 +60,38 @@
 
 .main-section-container {
   margin: 25px;
-  padding: 30px;
-  background-color: #eeeeee;
-  border: 1px solid var(--light-gray);
+  padding: 26px;
+  background-color: #f0f0f0;
   border-radius: 20px;
+  border: 4px solid transparent;
+  transition: all 0.4s ease-out;
+  box-shadow: rgba(240, 240, 240, 0.5) 6px 2px 16px 0px;
 }
 
-.main-section-container img {
+.main-section-container:hover,
+.main-section-container:active {
+  border: 4px solid #3f6ba5;
+  box-shadow: rgba(63, 107, 165, 0.7) 6px 2px 16px 0px;
+}
+
+.container-title {
+  grid-template-columns: 64px calc(100% - 64px);
+}
+
+.container-title img {
   transform: translateY(-15px);
   object-fit: contain;
-  float: right;
   padding: 5px;
 }
 
-.main-section-container h3 {
+.container-title h3 {
   color: #0c0c0c;
   margin-bottom: 20px;
-  font-size: 1.6rem;
+  letter-spacing: .5px;
+  font-weight: bold;
+  width: fit-content;
+  font-size: 1.4rem;
+  user-select: none;
 }
 
 .main-section-container p {
@@ -86,9 +105,8 @@
 .main-section-container a {
   color: black;
   cursor: pointer;
-  float: right;
+  justify-self: right;
   margin-right: 10px;
-  padding-bottom: 15px;
   font-size: 18px;
   letter-spacing: 0.6x;
   text-decoration: underline;
@@ -97,7 +115,10 @@
 @media screen and (max-width: 800px) {
   .main-section {
     display: block;
-    justify-content: center;
+  }
+
+  .page-title {
+    padding: .5rem;
   }
 
   .page-title h3::before {

@@ -16,16 +16,18 @@ const Szkolenia = () => {
           {szkolenia.szkolenia.left.map((Item) => {
             return (
               <div
-                className={styles['main-section-container']}
+                className={`${styles['main-section-container']} grid`}
                 key={Item.title}
               >
-                <img
-                  src={Item.src}
-                  width='56px'
-                  height='56px'
-                  alt={Item.title}
-                />
-                <h3>{Item.title}</h3>
+                <div className={`${styles['container-title']} grid`}>
+                  <img
+                    src={Item.src}
+                    width='56px'
+                    height='56px'
+                    alt={Item.title}
+                  />
+                  <h3>{Item.title}</h3>
+                </div>
                 <p>{Item.description}</p>
                 <Link to={`/szkolenia/${Item.title}`}>Zobacz więcej</Link>
               </div>
@@ -37,16 +39,18 @@ const Szkolenia = () => {
           {szkolenia.szkolenia.right.map((Item) => {
             return (
               <div
-                className={styles['main-section-container']}
+                className={`${styles['main-section-container']} grid`}
                 key={Item.title}
               >
-                <img
-                  src={Item.src}
-                  width='56px'
-                  height='56px'
-                  alt={Item.title}
-                />
-                <h3>{Item.title}</h3>
+                <div className={`${styles['container-title']} grid`}>
+                  <img
+                    src={Item.src}
+                    width='56px'
+                    height='56px'
+                    alt={Item.title}
+                  />
+                  <h3>{Item.title}</h3>
+                </div>
                 <p>{Item.description}</p>
                 <Link to={`/szkolenia/${Item.title}`}>Zobacz więcej</Link>
               </div>
