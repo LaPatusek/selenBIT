@@ -68,7 +68,7 @@ a.active {
     right: 0;
     cursor: pointer;
     background-color: #3f6ba5;
-    padding: 10px;
+    padding: 15px;
     border-bottom-left-radius: 100px;
     box-shadow: #3f6ba5 5px -5px 25px 10px;
   }
@@ -85,46 +85,68 @@ a.active {
 
   .nav-menu-800 {
     position: absolute;
-    left: 0;
-    background-color: #3f6ba5;
+    content: '';
+    top: 0;
+    right: 0;
     border-bottom-left-radius: 200px;
     z-index: 19;
+    height: 80px;
+    width: 80px;
+    transition: all 0.6s;
   }
 
-  .nav-menu-800 a {
-    color: white;
+  .navbar-800::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    background: url(../../Assets/BackgroundMenu.svg);
+    height: 0;
+    width: 0;
+    transform: translateY(-200px);
+    transition: all 0.6s;
+    border-bottom-left-radius: 100%;
+  }
+
+  .active-menu-800::before {
+    transform: translateY(0px);
+    height: 100vh;
+    width: 100vw;
+    border-bottom-left-radius: 0%;
+  }
+
+  .active-menu-800 {
+    width: 100vw;
+    height: 100vh;
   }
 
   .nav-menu-800 ul {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: grid;
-    width: 100vw;
     height: 100vh;
-    background-color: #3f6ba5;
+    width: 100vw;
     overflow: hidden;
   }
 
   .nav-menu-800 li {
-    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
     align-self: center;
+    z-index: 22;
+  }
+
+  .nav-menu-800 a {
+    color: white;
+    font-size: 1.5rem;
     padding: 10px;
-    width: 100px;
-    background-color: #3f6ba5;
-    letter-spacing: .6px;
+    letter-spacing: 0.6px;
     text-transform: uppercase;
+    visibility: hidden;
   }
 
-  .nav-menu-800 li:hover {
-    transition: 0.3s;
-    background-color: white;
-  }
-
-  .nav-menu-800 li:hover,
-  .nav-menu-800 li:active {
-    transition: 0.3s;
-    color: #dc8915;
-  }
-
-  .active li {
-    background-color: #885000;
+  .aktywne {
+    visibility: visible !important;
   }
 }

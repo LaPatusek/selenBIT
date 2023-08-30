@@ -1,5 +1,5 @@
 import { Star1 } from 'iconsax-react';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Logo from '../../Assets/cropped-logo11-300x147.webp';
 import styles from './Nav.module.css';
@@ -8,10 +8,39 @@ const Nav = () => {
   const [menuIsVis, setMenuIsVis] = useState(false);
   const [mainPageState, SetMainPageState] = useState(false);
   const { pathname } = useLocation();
+  const linkRefOne = useRef();
+  const linkRefTwo = useRef();
+  const linkRefThree = useRef();
+  const linkRefFour = useRef();
+  const linkRefFive = useRef();
 
   const menuHandler = () => {
     setMenuIsVis((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (menuIsVis) {
+      document.body.style.overflowY = 'hidden';
+    }
+    if (!menuIsVis) {
+      document.body.style.overflowY = 'scroll';
+    }
+
+    if (menuIsVis) {
+      const linkOne = linkRefOne?.current;
+      const linkTwo = linkRefTwo?.current;
+      const linkThree = linkRefThree?.current;
+      const linkFour = linkRefFour?.current;
+      const linkFive = linkRefFive?.current;
+      setTimeout(() => {
+        linkOne.classList.toggle(styles['aktywne']);
+        linkTwo.classList.toggle(styles['aktywne']);
+        linkThree.classList.toggle(styles['aktywne']);
+        linkFour.classList.toggle(styles['aktywne']);
+        linkFive.classList.toggle(styles['aktywne']);
+      }, 200);
+    }
+  }, [menuIsVis]);
 
   useEffect(() => {
     if (pathname === '/' || pathname === '/main') {
@@ -75,7 +104,11 @@ const Nav = () => {
           </div>
         </div>
       </div>
-      <div className={styles['navbar-800']}>
+      <div
+        className={`${styles['navbar-800']} ${
+          menuIsVis ? styles['active-menu-800'] : ''
+        }`}
+      >
         <img src={Logo} alt='logo' />
 
         <div className={styles['hamburger-menu-icon']} onClick={menuHandler}>
@@ -83,7 +116,7 @@ const Nav = () => {
         </div>
 
         {menuIsVis && (
-          <div className={styles['nav-menu-800']}>
+          <div className={`${styles['nav-menu-800']}`}>
             <ul>
               <li>
                 <NavLink
@@ -92,6 +125,7 @@ const Nav = () => {
                     isPending ? 'pending' : isActive ? 'active' : ''
                   }
                   onClick={menuHandler}
+                  ref={linkRefOne}
                 >
                   Strona główna
                 </NavLink>
@@ -104,6 +138,7 @@ const Nav = () => {
                     isPending ? 'pending' : isActive ? 'active' : ''
                   }
                   onClick={menuHandler}
+                  ref={linkRefTwo}
                 >
                   szkolenia
                 </NavLink>
@@ -116,6 +151,7 @@ const Nav = () => {
                     isPending ? 'pending' : isActive ? 'active' : ''
                   }
                   onClick={menuHandler}
+                  ref={linkRefThree}
                 >
                   Cennik
                 </NavLink>
@@ -128,6 +164,7 @@ const Nav = () => {
                     isPending ? 'pending' : isActive ? 'active' : ''
                   }
                   onClick={menuHandler}
+                  ref={linkRefFour}
                 >
                   O nas
                 </NavLink>
@@ -140,6 +177,7 @@ const Nav = () => {
                     isPending ? 'pending' : isActive ? 'active' : ''
                   }
                   onClick={menuHandler}
+                  ref={linkRefFive}
                 >
                   kontakt
                 </NavLink>

@@ -25,16 +25,20 @@
 .social-media a {
   color: white;
   margin: 13px;
-}
-
-.social-media img {
-  background-color: white;
   transition: all 0.3s;
 }
 
-.social-media img:hover,
-.social-media img:active {
-  background-color: var(--light-brown);
+.social-media a:hover {
+  color: var(--light-brown);
+}
+
+.linkedin path {
+  fill: white;
+  transition: all 0.3s;
+}
+
+.linkedin:hover path {
+  fill: var(--light-brown);
 }
 
 @media screen and (max-width: 800px) {
