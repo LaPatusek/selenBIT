@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import szkolenia from '../json/szkolenia.json';
 import styles from './szkolenia.module.css';
 
@@ -29,7 +28,6 @@ const Szkolenia = () => {
                   <h3>{Item.title}</h3>
                 </div>
                 <p>{Item.description}</p>
-                <Link to={`/szkolenia/${Item.title}`}>Zobacz więcej</Link>
               </div>
             );
           })}
@@ -52,7 +50,6 @@ const Szkolenia = () => {
                   <h3>{Item.title}</h3>
                 </div>
                 <p>{Item.description}</p>
-                <Link to={`/szkolenia/${Item.title}`}>Zobacz więcej</Link>
               </div>
             );
           })}

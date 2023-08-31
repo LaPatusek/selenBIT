@@ -54,12 +54,16 @@
   padding-left: 16px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1050px) {
   .blockquote-wrapper {
     display: flex;
   }
 
   .blockquote h4::first-letter {
     margin-left: -25px;
+  }
+
+  .blockquote span {
+    padding-left: 0px;
   }
 }

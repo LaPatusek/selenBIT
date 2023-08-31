@@ -3,8 +3,6 @@
   height: 700px;
   width: 100%;
   opacity: 0.77;
-  z-index: 0;
-  display: flex;
   justify-content: center;
   align-content: center;
 }
@@ -19,14 +17,13 @@
 
 .wrap h1 {
   font-size: 3rem;
+  user-select: none;
 }
 
 .wrap hr {
-  background-color: #ffab00;
-  height: 1px;
-  border: 1px solid #ffab00;
-  margin-top: 3px;
-  margin-bottom: 25px;
+  background-color: var(--orange);
+  height: 2px;
+  margin: 3px 0 25px 0;
 }
 
 .left-section {
@@ -77,8 +74,7 @@
 }
 
 .input-group {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   position: relative;
 }
 
@@ -123,7 +119,8 @@
   color: var(--orange);
 }
 
-.input-error input:valid ~ label {
+.input-error input:valid ~ label,
+.input-error textarea:valid ~ label {
   color: #d71f1f;
 }
 
@@ -162,8 +159,8 @@
 
 @media screen and (max-width: 900px) {
   .wrap {
-    display: block;
-    padding: 3rem 0 3rem 0;
+    display: block !important;
+    padding: 3rem 0;
     height: auto;
     width: auto;
   }

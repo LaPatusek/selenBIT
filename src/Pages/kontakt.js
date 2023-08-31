@@ -60,7 +60,7 @@ const Kontakt = () => {
 
   return (
     <div className={styles['background-image']}>
-      <div className={styles.wrap}>
+      <div className={`${styles.wrap} flex`}>
         <section className={styles['left-section']}>
           <h1>Skontaktuj się z nami!</h1>
           <hr />

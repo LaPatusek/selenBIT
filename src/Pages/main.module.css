@@ -1,6 +1,5 @@
 .second-section {
-  padding: 2rem;
-  padding-top: 5rem;
+  padding: 5rem 2rem 2rem 2rem;
   height: 800px;
   background-color: rgb(219, 219, 219);
 }
@@ -36,8 +35,6 @@
 }
 
 .content-box {
-  position: relative;
-  display: grid;
   justify-content: center;
   text-align: center;
   width: 33%;
@@ -132,9 +129,10 @@
 }
 
 .fourth-section--button {
-  border: 1px solid #192431;
-  background-color: #192431;
-  box-shadow: 5px 5px 15px #192431;
+  --color: #192431;
+  border: 1px solid var(--color);
+  background-color: var(--color);
+  box-shadow: 5px 5px 15px var(--color);
   border-radius: 50px;
   font-weight: bold;
   font-size: 14px;
@@ -148,7 +146,7 @@
 .fourth-section--button:hover,
 .fourth-section--button:active {
   background-color: transparent;
-  color: #151d28;
+  color: var(--color);
 }
 
 @media screen and (max-width: 800px) {
@@ -174,6 +172,7 @@
   .third-section {
     min-height: auto;
     display: block;
+    padding: 3rem;
   }
 
   .third-section--left-part {
@@ -185,7 +184,15 @@
     display: block;
   }
 
+  .fourth-section {
+    padding: 3rem;
+  }
+
   .fourth-section h3 {
     font-size: 1.1rem;
+  }
+
+  .fourth-section h4 {
+    width: 100%;
   }
 }

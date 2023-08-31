@@ -28,7 +28,7 @@ const AnimatedBackground = () => {
           id='oferta'
         >
           <h2>Przyszłość zaczyna się tutaj</h2>
-          <div className={styles['link-box']}>
+          <div className={`${styles['link-box']} flex`}>
             <Link to='/szkolenia' className={styles['main-button']}>
               nasza oferta
             </Link>

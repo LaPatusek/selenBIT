@@ -25,7 +25,7 @@ const Main = () => {
         </div>
 
         <div className={styles['second-section-boxes']}>
-          <div className={styles['content-box']}>
+          <div className={`${styles['content-box']} grid`}>
             <div className={styles['flex-wrap']}>
               <img src={firstIcon} alt='Jesteśmy mobilni' width='110px' />
               <h3>Jesteśmy mobilni</h3>
@@ -36,7 +36,7 @@ const Main = () => {
               </p>
             </div>
           </div>
-          <div className={styles['content-box']}>
+          <div className={`${styles['content-box']} grid`}>
             <div className={styles['flex-wrap']}>
               <img
                 src={secondIcon}
@@ -51,7 +51,7 @@ const Main = () => {
               </p>
             </div>
           </div>
-          <div className={styles['content-box']}>
+          <div className={`${styles['content-box']} grid`}>
             <div className={styles['flex-wrap']}>
               <img src={thirdIcon} alt='Inwidualne podejście' width='110px' />
               <h3>Inwidualne podejście</h3>

@@ -61,12 +61,12 @@ const Onas = () => {
       </div>
       <div className={styles['bottom-section']}>
         <h2>Firmy, z którymi współpracowaliśmy</h2>
-        <div className={styles['firm-container']}>
-          <div className={styles['bottom-firm-box']}>przykład 1</div>
-          <div className={styles['bottom-firm-box']}>przykład 2</div>
-          <div className={styles['bottom-firm-box']}>przykład 3</div>
-          <div className={styles['bottom-firm-box']}>przykład 4</div>
-          <div className={styles['bottom-firm-box']}>przykład 5</div>
+        <div className={`${styles['firm-container']} grid`}>
+          <div className={`${styles['bottom-firm-box']} grid`}>przykład 1</div>
+          <div className={`${styles['bottom-firm-box']} grid`}>przykład 2</div>
+          <div className={`${styles['bottom-firm-box']} grid`}>przykład 3</div>
+          <div className={`${styles['bottom-firm-box']} grid`}>przykład 4</div>
+          <div className={`${styles['bottom-firm-box']} grid`}>przykład 5</div>
         </div>
       </div>
     </div>

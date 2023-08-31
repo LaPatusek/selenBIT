@@ -9,15 +9,15 @@
 }
 
 .wrap h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  user-select: none;
 }
 
 .wrap hr {
   background-color: var(--orange);
   height: 1px;
   border: 1px solid var(--orange);
-  margin-top: 3px;
-  margin-bottom: 25px;
+  margin: 3px 0 25px 0;
 }
 
 .left-section {
@@ -32,8 +32,8 @@
   background-color: var(--light-brown);
   padding: 10px;
   width: 44px;
-  border-radius: 10%;
   height: 44px;
+  border-radius: 10%;
 }
 
 .contact-block {
@@ -69,8 +69,7 @@
 }
 
 .input-group {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   position: relative;
 }
 
@@ -106,7 +105,8 @@
   border: 1.5px solid #d71f1f !important;
 }
 
-.input-error input:valid ~ label {
+.input-error input:valid ~ label,
+.input-error textarea:valid ~ label {
   color: #d71f1f;
 }
 
@@ -195,7 +195,7 @@
 @media screen and (max-width: 900px) {
   .wrap {
     display: block;
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0;
     height: auto;
     width: auto;
   }
@@ -224,8 +224,7 @@
   }
 
   .form-checkboxes {
-    padding-top: 0.4rem;
-    padding-bottom: 0.3rem;
+    padding: 0.4rem 0 0.3rem 0;
   }
 
   .right-section button {

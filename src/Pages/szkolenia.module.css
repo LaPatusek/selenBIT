@@ -1,13 +1,10 @@
 .background {
-  padding: 5% 0 5% 0;
-  box-sizing: border-box;
+  padding: 5% 0;
 }
 
 .page-title {
   padding: 2rem;
-  display: block;
   text-align: center;
-  position: relative;
 }
 
 .page-title h3 {
@@ -21,8 +18,8 @@
 }
 
 .page-title h3::before {
-  content: '';
   position: absolute;
+  content: '';
   transform: translateY(500%) translateX(-275px);
   padding-left: 100px;
   width: 75px;
@@ -31,8 +28,8 @@
 }
 
 .page-title h3::after {
-  content: '';
   position: absolute;
+  content: '';
   transform: translateY(500%);
   margin-left: 100px;
   padding-right: 100px;
@@ -87,7 +84,7 @@
 .container-title h3 {
   color: #0c0c0c;
   margin-bottom: 20px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-weight: bold;
   width: fit-content;
   font-size: 1.4rem;
@@ -118,7 +115,7 @@
   }
 
   .page-title {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .page-title h3::before {

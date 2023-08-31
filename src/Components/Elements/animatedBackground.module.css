@@ -3,9 +3,12 @@
   width: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   position: relative;
+  z-index: 10;
 }
 
 .stars {
+  position: absolute;
+  bottom: 0;
   width: 1px;
   height: 1px;
   background: transparent;
@@ -135,10 +138,10 @@
     1084px 7px #fff, 1767px 379px #fff, 493px 168px #fff, 7px 530px #fff,
     916px 749px #fff, 1850px 64px #fff, 1516px 580px #fff, 9px 381px #fff,
     1047px 96px #fff;
-  animation: animStar 50s linear infinite;
+  animation: animStar 60s linear infinite;
 }
 .stars:after {
-  content: ' ';
+  content: '';
   position: absolute;
   top: 1000px;
   width: 1px;
@@ -330,7 +333,7 @@
   animation: animStar 100s linear infinite;
 }
 .stars2:after {
-  content: ' ';
+  content: '';
   position: absolute;
   top: 1000px;
   width: 2px;
@@ -422,7 +425,7 @@
   animation: animStar 150s linear infinite;
 }
 .stars3:after {
-  content: ' ';
+  content: '';
   position: absolute;
   top: 1000px;
   width: 3px;
@@ -474,7 +477,7 @@
 
 .higher-text a {
   background: transparent;
-  color: #fff;
+  color: white;
   font-size: 1.8rem;
   letter-spacing: 0.7px;
   cursor: pointer;
@@ -506,7 +509,7 @@
 }
 
 .text h2 {
-  color: #fff;
+  color: white;
   font-weight: bold;
   font-size: 4rem;
   letter-spacing: 4px;
@@ -514,7 +517,6 @@
 }
 
 .link-box {
-  display: flex;
   align-content: center;
   justify-content: center;
 }

@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} flex`}>
       <section className={styles['first-section']}>
         <h1>
           © SELENBIT 2023 <br /> WSZELKIE PRAWA ZASTRZEŻONE.
