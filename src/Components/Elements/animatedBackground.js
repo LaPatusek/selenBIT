@@ -8,11 +8,30 @@ const AnimatedBackground = () => {
   const textRef = useRef();
   const isVisible = useObserver(textRef);
 
+  const generateBoxShadow = (n) => {
+    let value = `${getRandom(100)}vw ${getRandom(230)}vh #FFF`;
+    for (let i = 2; i <= n; i++) {
+      value += `, ${getRandom(100)}vw ${getRandom(230)}vh #FFF`;
+    }
+    return value;
+  };
+
+  const getRandom = (max) => {
+    return Math.floor(Math.random() * max);
+  };
+
+  const smallShadows = generateBoxShadow(700);
+  const mediumShadows = generateBoxShadow(200);
+  const bigShadows = generateBoxShadow(100);
+
   return (
     <section className={styles['stars-background']}>
-      <div className={styles.stars} />
-      <div className={styles.stars2} />
-      <div className={styles.stars3} />
+      <div className={`${styles.stars}`} style={{ boxShadow: smallShadows }} />
+      <div
+        className={`${styles.stars2}`}
+        style={{ boxShadow: mediumShadows }}
+      />
+      <div className={`${styles.stars3}`} style={{ boxShadow: bigShadows }} />
       <div className={styles.text}>
         <div className={styles['higher-text']}>
           <h1>Rozwiązania IT których potrzebujesz</h1>
