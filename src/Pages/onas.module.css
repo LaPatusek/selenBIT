@@ -138,6 +138,11 @@
 }
 
 @media screen and (max-width: 800px) {
+  .background {
+    background-position-x: -150px;
+    background-position-y: -150px;
+  }
+
   .wrap {
     display: inline-block;
     padding: 2rem;
