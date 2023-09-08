@@ -1,4 +1,5 @@
 import { Briefcase, Call } from 'iconsax-react';
+import { Helmet } from 'react-helmet';
 import useInput from '../Components/hooks/useInput';
 import styles from './kontakt.module.css';
 
@@ -60,6 +61,9 @@ const Kontakt = () => {
 
   return (
     <div className={styles['background-image']}>
+      <Helmet>
+        <link rel='canonical' href='https://selenbit.pl/#/kontakt' />
+      </Helmet>
       <div className={`${styles.wrap} flex`}>
         <section className={styles['left-section']}>
           <h1>Skontaktuj się z nami!</h1>

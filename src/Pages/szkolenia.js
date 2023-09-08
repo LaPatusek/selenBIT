@@ -1,9 +1,13 @@
+import { Helmet } from 'react-helmet';
 import szkolenia from '../json/szkolenia.json';
 import styles from './szkolenia.module.css';
 
 const Szkolenia = () => {
   return (
     <div className={styles.background}>
+      <Helmet>
+        <link rel='canonical' href='https://selenbit.pl/#/szkolenia' />
+      </Helmet>
       <section className={styles['page-title']}>
         <div className={styles['display-flex']}>
           <h3> Szkolenia </h3>

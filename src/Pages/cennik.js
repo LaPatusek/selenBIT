@@ -1,5 +1,6 @@
 import { Briefcase, Call } from 'iconsax-react';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import useInput from '../Components/hooks/useInput';
 import styles from './cennik.module.css';
 
@@ -98,6 +99,9 @@ const Cennik = () => {
 
   return (
     <div className={styles.wrap}>
+      <Helmet>
+        <link rel='canonical' href='https://selenbit.pl/#/cennik' />
+      </Helmet>
       <section className={styles['left-section']}>
         <h1>
           Skontaktuj się <br /> i zapytaj o cenę
@@ -138,7 +142,9 @@ const Cennik = () => {
               onBlur={nameBlurHandler}
               value={enteredName}
             />
-            <label className={styles['user-label']} htmlFor='name'>Imię i nazwisko</label>
+            <label className={styles['user-label']} htmlFor='name'>
+              Imię i nazwisko
+            </label>
           </div>
           <div
             className={`${styles['input-group']} ${
@@ -154,7 +160,9 @@ const Cennik = () => {
               onBlur={topicBlurHandler}
               value={enteredTopic}
             />
-            <label className={styles['user-label']} htmlFor='topic'>Temat</label>
+            <label className={styles['user-label']} htmlFor='topic'>
+              Temat
+            </label>
           </div>
           <div
             className={`${styles['input-group']} ${
@@ -170,7 +178,9 @@ const Cennik = () => {
               value={enteredMail}
               className={styles.input}
             />
-            <label className={styles['user-label']} htmlFor='email'>Adres email</label>
+            <label className={styles['user-label']} htmlFor='email'>
+              Adres email
+            </label>
           </div>
           <div
             className={`${styles['input-group']} ${
@@ -186,7 +196,9 @@ const Cennik = () => {
               value={enteredTime}
               className={styles.input}
             />
-            <label className={styles['user-label']} htmlFor='time'>Ilość godzin (45min)</label>
+            <label className={styles['user-label']} htmlFor='time'>
+              Ilość godzin (45min)
+            </label>
           </div>
           <div
             className={`${styles['input-group']} ${
@@ -203,7 +215,9 @@ const Cennik = () => {
               className={`${styles.input}`}
               placeholder='Napisz czego ma dotyczyć szkolenie, kto jest odbiorcą i ile osób ma zostać przeszkolonych, a także inne szczególne zamówienia.'
             />
-            <label className={styles['user-label']} htmlFor='requirements'>Twoja wiadomość</label>
+            <label className={styles['user-label']} htmlFor='requirements'>
+              Twoja wiadomość
+            </label>
           </div>
           Opcje dodatkowe:
           <div className={styles['form-checkboxes']}>

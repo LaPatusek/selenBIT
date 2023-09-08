@@ -1,4 +1,5 @@
 import { Messages3 } from 'iconsax-react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import photo from '../Assets/meeting-photo.webp';
 import styles from './onas.module.css';
@@ -6,6 +7,9 @@ import styles from './onas.module.css';
 const Onas = () => {
   return (
     <div className={styles.background}>
+      <Helmet>
+        <link rel='canonical' href='https://selenbit.pl/#/o-nas' />
+      </Helmet>
       <div className={styles.wrap}>
         <section className={styles['left-section']}>
           <p className={styles.paragraf}>Selenbit - przekazujemy wiedzę</p>

@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import thirdIcon from '../Assets/human-icon.webp';
 import firstIcon from '../Assets/migrate-icon.webp';
@@ -10,6 +11,10 @@ import styles from './main.module.css';
 const Main = () => {
   return (
     <Fragment>
+      <Helmet>
+        <link rel='canonical' href='https://selenbit.pl/' />
+      </Helmet>
+
       <section className={styles['first-section']}>
         <AnimatedBackground />
       </section>
