@@ -5,7 +5,11 @@
 }
 
 .header img {
+  margin-top: 5px;
   padding-left: 6rem;
+  height: auto;
+  width: 100%;
+  z-index: 18;
 }
 
 .main-navbar {

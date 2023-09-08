@@ -1,6 +1,6 @@
 import { Star1 } from 'iconsax-react';
 import { Fragment, useEffect, useRef, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../Assets/cropped-logo11-300x147.webp';
 import styles from './Nav.module.css';
 
@@ -55,52 +55,17 @@ const Nav = () => {
           mainPageState ? styles['main-navbar'] : ''
         }`}
       >
-        <NavLink to='/main'>
-          <img src={Logo} alt='logo' />
-        </NavLink>
+        <Link to='/'>
+          <img src={Logo} alt='logo' width='300px'/>
+        </Link>
 
         <div className={`${styles.nav}`}>
           <div className={styles['nav-links']}>
-            <NavLink
-              to='/main'
-              className={({ isActive, isPending }) =>
-                isPending ? 'pending' : isActive ? 'active' : ''
-              }
-            >
-              Strona główna
-            </NavLink>
-            <NavLink
-              to='/szkolenia'
-              className={({ isActive, isPending }) =>
-                isPending ? 'pending' : isActive ? 'active' : ''
-              }
-            >
-              Szkolenia
-            </NavLink>
-            <NavLink
-              to='/cennik'
-              className={({ isActive, isPending }) =>
-                isPending ? 'pending' : isActive ? 'active' : ''
-              }
-            >
-              Cennik
-            </NavLink>
-            <NavLink
-              to='/o-nas'
-              className={({ isActive, isPending }) =>
-                isPending ? 'pending' : isActive ? 'active' : ''
-              }
-            >
-              O nas
-            </NavLink>
-            <NavLink
-              to='/kontakt'
-              className={({ isActive, isPending }) =>
-                isPending ? 'pending' : isActive ? 'active' : ''
-              }
-            >
-              Kontakt
-            </NavLink>
+            <Link to='/'>Strona główna</Link>
+            <Link to='/szkolenia'>Szkolenia</Link>
+            <Link to='/cennik'>Cennik</Link>
+            <Link to='/o-nas'>O nas</Link>
+            <Link to='/kontakt'>Kontakt</Link>
           </div>
         </div>
       </div>
@@ -119,68 +84,33 @@ const Nav = () => {
           <div className={`${styles['nav-menu-800']}`}>
             <ul>
               <li>
-                <NavLink
-                  to='/main'
-                  className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''
-                  }
-                  onClick={menuHandler}
-                  ref={linkRefOne}
-                >
+                <Link to='/main' onClick={menuHandler} ref={linkRefOne}>
                   Strona główna
-                </NavLink>
+                </Link>
               </li>
 
               <li>
-                <NavLink
-                  to='/szkolenia'
-                  className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''
-                  }
-                  onClick={menuHandler}
-                  ref={linkRefTwo}
-                >
+                <Link to='/szkolenia' onClick={menuHandler} ref={linkRefTwo}>
                   szkolenia
-                </NavLink>
+                </Link>
               </li>
 
               <li>
-                <NavLink
-                  to='/cennik'
-                  className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''
-                  }
-                  onClick={menuHandler}
-                  ref={linkRefThree}
-                >
+                <Link to='/cennik' onClick={menuHandler} ref={linkRefThree}>
                   Cennik
-                </NavLink>
+                </Link>
               </li>
 
               <li>
-                <NavLink
-                  to='/o-nas'
-                  className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''
-                  }
-                  onClick={menuHandler}
-                  ref={linkRefFour}
-                >
+                <Link to='/o-nas' onClick={menuHandler} ref={linkRefFour}>
                   O nas
-                </NavLink>
+                </Link>
               </li>
 
               <li>
-                <NavLink
-                  to='/kontakt'
-                  className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''
-                  }
-                  onClick={menuHandler}
-                  ref={linkRefFive}
-                >
+                <Link to='/kontakt' onClick={menuHandler} ref={linkRefFive}>
                   kontakt
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </div>
