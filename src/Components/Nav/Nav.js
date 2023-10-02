@@ -56,7 +56,7 @@ const Nav = () => {
         }`}
       >
         <Link to='/'>
-          <img src={Logo} alt='logo' width='300px'/>
+          <img src={Logo} alt='logo' width='300px' height={'147px'} />
         </Link>
 
         <div className={`${styles.nav}`}>
@@ -74,7 +74,7 @@ const Nav = () => {
           menuIsVis ? styles['active-menu-800'] : ''
         }`}
       >
-        <img src={Logo} alt='logo' />
+        <img src={Logo} alt='logo' height={'147px'} width={'300px'} />
 
         <div className={styles['hamburger-menu-icon']} onClick={menuHandler}>
           <Star1 size='32' variant='Bold' />

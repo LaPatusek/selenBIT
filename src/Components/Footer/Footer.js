@@ -15,6 +15,7 @@ const Footer = () => {
           target='_blank'
           rel='noreferrer'
           className={styles.linkedin}
+          aria-label='linkedin'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -29,6 +30,7 @@ const Footer = () => {
           href='https://www.facebook.com/ErykTrojanowski'
           target='_blank'
           rel='noreferrer'
+          aria-label='FaceBook'
         >
           <Facebook size='40' />
         </a>
@@ -36,6 +38,7 @@ const Footer = () => {
           href='https://www.instagram.com/eryk7777/'
           target='_blank'
           rel='noreferrer'
+          aria-label='Instagram'
         >
           <Instagram size='40' />
         </a>

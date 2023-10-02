@@ -21,8 +21,8 @@ const Main = () => {
 
       <section className={styles['second-section']}>
         <div className={styles['second-section-title']}>
-          <h3>Co oferujemy?</h3>
-          <h1>Szkolenia</h1>
+          <h1>Co oferujemy?</h1>
+          <h2>Szkolenia</h2>
           <p>
             Oferujemy szkolenia informatyczne na terenie Rzeszowa oraz całego
             kraju. <br /> Robimy to z pasją. Skutecznie.
@@ -32,9 +32,9 @@ const Main = () => {
         <div className={styles['second-section-boxes']}>
           <div className={`${styles['content-box']} grid`}>
             <div className={styles['flex-wrap']}>
-              <img src={firstIcon} alt='Jesteśmy mobilni' width='110px' />
+              <img src={firstIcon} alt='Jesteśmy mobilni' width='110px' height={'110px'}/>
               <h3>Jesteśmy mobilni</h3>
-              <h2>Przyjedziemy do Ciebie</h2>
+              <h4>Przyjedziemy do Ciebie</h4>
               <p>
                 Zajęcia prowadzimy lokalnie, nasi trenerzy trafią w wyznaczone
                 miejsce. Oferujemy także szkolenia zdalne.
@@ -47,9 +47,10 @@ const Main = () => {
                 src={secondIcon}
                 alt='Dopasujemy się do Ciebie'
                 width='110px'
+                height='110px'
               />
               <h3>Dopasujemy się do Ciebie</h3>
-              <h2>Spełnimy Twoje oczekiwania</h2>
+              <h4>Spełnimy Twoje oczekiwania</h4>
               <p>
                 Szkolenia opracowujemy i dopasowujemy do Twoich i Twojej firmy
                 potrzeb.
@@ -58,9 +59,14 @@ const Main = () => {
           </div>
           <div className={`${styles['content-box']} grid`}>
             <div className={styles['flex-wrap']}>
-              <img src={thirdIcon} alt='Inwidualne podejście' width='110px' />
+              <img
+                src={thirdIcon}
+                alt='Inwidualne podejście'
+                width='110px'
+                height={'110px'}
+              />
               <h3>Inwidualne podejście</h3>
-              <h2>Dopasujemy się do poziomu </h2>
+              <h4>Dopasujemy się do poziomu </h4>
               <p>
                 Wiemy, że szkolenia spotykają się ze zróżnicowaną potrzebą
                 uczestników. Bez obaw. Dostoujemy się.

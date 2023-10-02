@@ -3,7 +3,7 @@
   max-width: 350px;
 }
 
-.blockquote h1 {
+.blockquote h2 {
   position: relative;
   color: var(--light-brown);
   font-size: 1.2rem;
@@ -13,7 +13,7 @@
   padding: 25px;
 }
 
-.blockquote h1:after {
+.blockquote h2:after {
   content: '';
   position: absolute;
   border: 2px solid var(--light-brown);
@@ -27,7 +27,7 @@
   z-index: 3;
 }
 
-.blockquote h1:before {
+.blockquote h2:before {
   content: '';
   position: absolute;
   width: 80px;
@@ -37,7 +37,7 @@
   z-index: 2;
 }
 
-.blockquote h4 {
+.blockquote h3 {
   color: #ffffff;
   font-size: 1.3rem;
   line-height: 1.2;
@@ -46,7 +46,7 @@
   padding-left: 12px;
 }
 
-.blockquote h4:first-letter {
+.blockquote h3:first-letter {
   margin-left: -12px;
 }
 
@@ -59,7 +59,7 @@
     display: flex;
   }
 
-  .blockquote h4::first-letter {
+  .blockquote h3::first-letter {
     margin-left: -25px;
   }
 

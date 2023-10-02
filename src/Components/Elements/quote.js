@@ -4,13 +4,13 @@ const Quote = () => {
   return (
     <div className={styles['blockquote-wrapper']}>
       <div className={styles['blockquote']}>
-        <h1>
+        <h2>
           Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny i
           słuszny. Bądź rozsądny w odpoczynku
-        </h1>
-        <h4>
+        </h2>
+        <h3>
           &mdash; Marcus <span>Aurelius</span>
-        </h4>
+        </h3>
       </div>
     </div>
   );
