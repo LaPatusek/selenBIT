@@ -1,6 +1,9 @@
 import { Messages3 } from 'iconsax-react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import wsiz from '../Assets/WSIiZ.webp';
+import iSOFT from '../Assets/iSOFT.svg';
+import BonumConsulting from '../Assets/logo.webp';
 import photo from '../Assets/meeting-photo.webp';
 import styles from './onas.module.css';
 
@@ -64,13 +67,30 @@ const Onas = () => {
         </section>
       </div>
       <div className={styles['bottom-section']}>
-        <h2>Firmy, z którymi współpracowaliśmy</h2>
+        <h2>Współpracowaliśmy</h2>
         <div className={`${styles['firm-container']} grid`}>
-          <div className={`${styles['bottom-firm-box']} grid`}>przykład 1</div>
-          <div className={`${styles['bottom-firm-box']} grid`}>przykład 2</div>
-          <div className={`${styles['bottom-firm-box']} grid`}>przykład 3</div>
-          <div className={`${styles['bottom-firm-box']} grid`}>przykład 4</div>
-          <div className={`${styles['bottom-firm-box']} grid`}>przykład 5</div>
+          <div className={`${styles['bottom-firm-box']} grid`}>
+            <img src={iSOFT} alt='iSOFT' width={'90%'} height={'auto'} />
+          </div>
+          <div className={`${styles['bottom-firm-box']} grid`}>
+            <img
+              src={BonumConsulting}
+              alt='Bonum Consulting'
+              width={'90%'}
+              height={'auto'}
+            />
+          </div>
+          <div className={`${styles['bottom-firm-box']} grid`}>
+            <img
+              src={wsiz}
+              alt='Wyższa Szkoła Informatyki i Zarządzania'
+              width={'90%'}
+              height={'auto'}
+            />
+          </div>
+          <div className={`${styles['bottom-firm-box']} grid`}>
+            <span> RCSA </span>
+          </div>
         </div>
       </div>
     </div>
