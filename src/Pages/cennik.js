@@ -1,5 +1,6 @@
+import emailjs from '@emailjs/browser';
 import { Briefcase, Call } from 'iconsax-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import useInput from '../Components/hooks/useInput';
 import styles from './cennik.module.css';
@@ -9,6 +10,7 @@ const Cennik = () => {
   const [egzaminState, setEgzaminState] = useState(false);
   const [salaState, setSalaState] = useState(false);
   const [materialsState, setMaterialsState] = useState(false);
+  const wycenaRef = useRef();
 
   const materialsFunction = () => {
     setMaterialsState(!materialsState);
@@ -90,6 +92,22 @@ const Cennik = () => {
       return;
     }
 
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SMTP_ID,
+        process.env.REACT_APP_TEMPLATE_WYCENA,
+        wycenaRef.current,
+        process.env.REACT_APP_PUBLIC_KEY,
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+
     nameReset();
     topicReset();
     mailReset();
@@ -126,7 +144,7 @@ const Cennik = () => {
 
       <section className={styles['right-section']}>
         <h2>WYŚLIJ ZAPYTANIE O CENĘ SZKOLENIA</h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} ref={wycenaRef}>
           <div
             className={`${styles['input-group']} ${
               nameHasError ? styles['input-error'] : ''

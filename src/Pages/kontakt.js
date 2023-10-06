@@ -1,9 +1,13 @@
+import emailjs from '@emailjs/browser';
 import { Briefcase, Call } from 'iconsax-react';
+import { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import useInput from '../Components/hooks/useInput';
 import styles from './kontakt.module.css';
 
 const Kontakt = () => {
+  const formRef = useRef();
+
   const {
     value: enteredName,
     isValid: nameIsValid,
@@ -53,6 +57,22 @@ const Kontakt = () => {
       return;
     }
 
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SMTP_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_PUBLIC_KEY,
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+
     nameReset();
     topicReset();
     mailReset();
@@ -87,7 +107,7 @@ const Kontakt = () => {
 
         <section className={styles['right-section']}>
           <h2>Wyślij zapytanie</h2>
-          <form onSubmit={submitHandler}>
+          <form onSubmit={submitHandler} ref={formRef}>
             <div
               className={`${styles['input-group']} ${
                 nameHasError ? styles['input-error'] : ''
