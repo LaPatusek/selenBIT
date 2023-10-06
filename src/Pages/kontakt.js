@@ -95,7 +95,7 @@ const Kontakt = () => {
             >
               <input
                 type='text'
-                name='text'
+                name='user_name'
                 id='name'
                 autoComplete='off'
                 className={styles.input}
@@ -115,6 +115,7 @@ const Kontakt = () => {
               <input
                 type='text'
                 id='topic'
+                name='user_topic'
                 autoComplete='off'
                 className={styles.input}
                 onChange={topicChangeHandler}
@@ -133,6 +134,7 @@ const Kontakt = () => {
               <input
                 type='email'
                 id='email'
+                name='user_email'
                 autoComplete='off'
                 onChange={mailChangeHandler}
                 onBlur={mailBlurHandler}
@@ -151,6 +153,7 @@ const Kontakt = () => {
               <textarea
                 type='textarea'
                 id='requirements'
+                name='message'
                 autoComplete='off'
                 onChange={messageChangeHandler}
                 onBlur={messageBlurHandler}

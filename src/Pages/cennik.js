@@ -134,8 +134,8 @@ const Cennik = () => {
           >
             <input
               type='text'
-              name='text'
               id='name'
+              name='user_name'
               autoComplete='off'
               className={styles.input}
               onChange={nameChangeHandler}
@@ -154,6 +154,7 @@ const Cennik = () => {
             <input
               type='text'
               id='topic'
+              name='user_topic'
               autoComplete='off'
               className={styles.input}
               onChange={topicChangeHandler}
@@ -172,6 +173,7 @@ const Cennik = () => {
             <input
               type='email'
               id='email'
+              name='user_email'
               autoComplete='off'
               onChange={mailChangeHandler}
               onBlur={mailBlurHandler}
@@ -190,6 +192,7 @@ const Cennik = () => {
             <input
               type='number'
               id='time'
+              name='user_godziny'
               autoComplete='off'
               onChange={timeChangeHandler}
               onBlur={timeBlurHandler}
@@ -208,6 +211,7 @@ const Cennik = () => {
             <textarea
               type='textarea'
               id='requirements'
+              name='message'
               autoComplete='off'
               onChange={requirementsChangeHandler}
               onBlur={requirementsBlurHandler}
