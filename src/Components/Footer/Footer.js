@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from 'iconsax-react';
+import { Facebook } from 'iconsax-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -33,14 +33,6 @@ const Footer = () => {
           aria-label='FaceBook'
         >
           <Facebook size='40' />
-        </a>
-        <a
-          href='https://www.instagram.com/eryk7777/'
-          target='_blank'
-          rel='noreferrer'
-          aria-label='Instagram'
-        >
-          <Instagram size='40' />
         </a>
       </section>
     </div>
