@@ -79,6 +79,8 @@
   transform: translateY(-15px);
   object-fit: contain;
   padding: 5px;
+  width: 56px;
+  height: 56px;
 }
 
 .container-title h3 {
@@ -93,9 +95,9 @@
 
 .main-section-container p {
   color: gray;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   font-size: 1.05rem;
-  line-height: 1.2rem;
+  line-height: 1.25rem;
   padding-bottom: 10px;
 }
 
