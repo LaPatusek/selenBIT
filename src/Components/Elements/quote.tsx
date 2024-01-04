@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './quote.module.css';
 
-const Quote = () => {
+const Quote: React.FC = () => {
   return (
     <div className={styles['blockquote-wrapper']}>
       <div className={styles['blockquote']}>

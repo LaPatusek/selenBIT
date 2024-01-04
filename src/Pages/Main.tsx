@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import thirdIcon from '../Assets/human-icon.webp';
@@ -8,7 +8,7 @@ import AnimatedBackground from '../Components/Elements/animatedBackground';
 import Quote from '../Components/Elements/quote';
 import styles from './main.module.css';
 
-const Main = () => {
+const Main: React.FC = () => {
   return (
     <Fragment>
       <Helmet>
@@ -32,7 +32,12 @@ const Main = () => {
         <div className={styles['second-section-boxes']}>
           <div className={`${styles['content-box']} grid`}>
             <div className={styles['flex-wrap']}>
-              <img src={firstIcon} alt='Jesteśmy mobilni' width='110px' height={'110px'}/>
+              <img
+                src={firstIcon}
+                alt='Jesteśmy mobilni'
+                width='110px'
+                height={'110px'}
+              />
               <h3>Jesteśmy mobilni</h3>
               <h4>Przyjedziemy do Ciebie</h4>
               <p>

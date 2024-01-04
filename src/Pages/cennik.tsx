@@ -1,16 +1,24 @@
 import emailjs from '@emailjs/browser';
 import { Briefcase, Call } from 'iconsax-react';
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import useInput from '../Components/hooks/useInput';
 import styles from './cennik.module.css';
 
-const Cennik = () => {
+declare var process: {
+  env: {
+    REACT_APP_SMTP_ID: string;
+    REACT_APP_TEMPLATE_WYCENA: string;
+    REACT_APP_PUBLIC_KEY: string;
+  };
+};
+
+const Cennik: React.FC = () => {
   const [cateringState, setCateringState] = useState(false);
   const [egzaminState, setEgzaminState] = useState(false);
   const [salaState, setSalaState] = useState(false);
   const [materialsState, setMaterialsState] = useState(false);
-  const wycenaRef = useRef();
+  const wycenaRef = useRef(null);
 
   const materialsFunction = () => {
     setMaterialsState(!materialsState);
@@ -35,7 +43,9 @@ const Cennik = () => {
     inputBlurHandler: nameBlurHandler,
     hasError: nameHasError,
     reset: nameReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   const {
     value: enteredTopic,
@@ -44,7 +54,9 @@ const Cennik = () => {
     inputBlurHandler: topicBlurHandler,
     hasError: topicHasError,
     reset: topicReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   const {
     value: enteredMail,
@@ -53,7 +65,9 @@ const Cennik = () => {
     inputBlurHandler: mailBlurHandler,
     hasError: mailHasError,
     reset: mailReset,
-  } = useInput((value) => value.trim().includes('@'));
+  } = useInput({
+    validateValue: (value: string) => value.trim().includes('@'),
+  });
 
   const {
     value: enteredRequirements,
@@ -62,7 +76,9 @@ const Cennik = () => {
     inputBlurHandler: requirementsBlurHandler,
     hasError: requirementsHasError,
     reset: requirementsReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   const {
     value: enteredTime,
@@ -71,7 +87,9 @@ const Cennik = () => {
     inputBlurHandler: timeBlurHandler,
     hasError: timeHasError,
     reset: timeReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   let formIsValid = false;
 
@@ -85,7 +103,7 @@ const Cennik = () => {
     formIsValid = true;
   }
 
-  const submitHandler = (e) => {
+  const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formIsValid) {
@@ -96,7 +114,7 @@ const Cennik = () => {
       .sendForm(
         process.env.REACT_APP_SMTP_ID,
         process.env.REACT_APP_TEMPLATE_WYCENA,
-        wycenaRef.current,
+        wycenaRef.current!,
         process.env.REACT_APP_PUBLIC_KEY,
       )
       .then(
@@ -129,16 +147,23 @@ const Cennik = () => {
           <div className={styles.icon}>
             <Call variant='Bold' />
           </div>
-          <h2>Telefon</h2>
-          <p> +48 531 771 944 </p>
+          <div className={styles['contact-text']}>
+            <h2>Telefon</h2>
+            <a href='tel:+48531771944'> +48 531 771 944 </a>
+          </div>
         </div>
 
         <div className={styles['contact-block']}>
           <div className={styles.icon}>
             <Briefcase variant='Bold' />
           </div>
-          <h2> Email</h2>
-          <p> eryktrojanowski@gmail.com </p>
+          <div className={styles['contact-text']}>
+            <h2> Email</h2>
+            <a href='mailto:eryktrojanowski@gmail.com'>
+              {' '}
+              eryktrojanowski@gmail.com{' '}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -227,7 +252,6 @@ const Cennik = () => {
             }`}
           >
             <textarea
-              type='textarea'
               id='requirements'
               name='message'
               autoComplete='off'

@@ -1,12 +1,13 @@
 import { Facebook } from 'iconsax-react';
+import React from 'react';
 import styles from './Footer.module.css';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <div className={`${styles.footer} flex`}>
+    <div className={`${styles.footer} grid`}>
       <section className={styles['first-section']}>
         <h1>
-          © SELENBIT 2023 <br /> WSZELKIE PRAWA ZASTRZEŻONE.
+          © SELENBIT 2024 <br /> WSZELKIE PRAWA ZASTRZEŻONE
         </h1>
       </section>
       <section className={styles['social-media']}>

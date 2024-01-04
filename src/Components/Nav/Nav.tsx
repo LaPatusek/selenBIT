@@ -1,18 +1,18 @@
 import { Star1 } from 'iconsax-react';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../Assets/cropped-logo11-300x147.webp';
 import styles from './Nav.module.css';
 
-const Nav = () => {
-  const [menuIsVis, setMenuIsVis] = useState(false);
-  const [mainPageState, SetMainPageState] = useState(false);
+const Nav: React.FC = () => {
+  const [menuIsVis, setMenuIsVis] = useState<boolean>(false);
+  const [mainPageState, SetMainPageState] = useState<boolean>(false);
   const { pathname } = useLocation();
-  const linkRefOne = useRef();
-  const linkRefTwo = useRef();
-  const linkRefThree = useRef();
-  const linkRefFour = useRef();
-  const linkRefFive = useRef();
+  const linkRefOne = useRef<HTMLAnchorElement>(null);
+  const linkRefTwo = useRef<HTMLAnchorElement>(null);
+  const linkRefThree = useRef<HTMLAnchorElement>(null);
+  const linkRefFour = useRef<HTMLAnchorElement>(null);
+  const linkRefFive = useRef<HTMLAnchorElement>(null);
 
   const menuHandler = () => {
     setMenuIsVis((prev) => !prev);
@@ -27,11 +27,11 @@ const Nav = () => {
     }
 
     if (menuIsVis) {
-      const linkOne = linkRefOne?.current;
-      const linkTwo = linkRefTwo?.current;
-      const linkThree = linkRefThree?.current;
-      const linkFour = linkRefFour?.current;
-      const linkFive = linkRefFive?.current;
+      const linkOne = linkRefOne?.current!;
+      const linkTwo = linkRefTwo?.current!;
+      const linkThree = linkRefThree?.current!;
+      const linkFour = linkRefFour?.current!;
+      const linkFive = linkRefFive?.current!;
       setTimeout(() => {
         linkOne.classList.toggle(styles['aktywne']);
         linkTwo.classList.toggle(styles['aktywne']);
@@ -56,7 +56,7 @@ const Nav = () => {
         }`}
       >
         <Link to='/'>
-          <img src={Logo} alt='logo' width='300px' height={'147px'} />
+          <img src={Logo} alt='logo' width='auto' height={'127px'} />
         </Link>
 
         <div className={`${styles.nav}`}>

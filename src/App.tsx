@@ -9,6 +9,12 @@ import Kontakt from './Pages/kontakt';
 import Onas from './Pages/onas';
 import Szkolenia from './Pages/szkolenia';
 
+declare var process: {
+  env: {
+    REACT_APP_TRACKING_ID: string;
+  };
+};
+
 const TRACKING_ID = process.env.REACT_APP_TRACKING_ID;
 
 ReactGA.initialize(TRACKING_ID);
@@ -38,9 +44,9 @@ const App = () => {
 
   return (
     <Fragment>
-      <header>
+      <nav>
         <Nav />
-      </header>
+      </nav>
 
       <main>
         <Routes>

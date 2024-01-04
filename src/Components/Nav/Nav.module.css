@@ -1,15 +1,14 @@
 .header {
   background-color: var(--dark-gray);
-  padding: 8px;
-  display: flex;
+  padding: 10px 4rem;
+  display: grid;
+  grid-template-columns: 400px calc(100% - 400px);
 }
 
 .header img {
   margin-top: 5px;
-  padding-left: 6rem;
-  height: auto;
-  width: 100%;
-  z-index: 18;
+  height: 127px;
+  width: auto;
 }
 
 .main-navbar {
@@ -18,16 +17,16 @@
 }
 
 .nav {
-  position: absolute;
-  right: 5%;
-  top: 130px;
+  align-self: flex-end;
+  justify-self: right;
 }
 
 .nav-links a {
-  color: white;
+  font-size: 20px;
+  color: #fff;
   text-transform: uppercase;
   margin: 8px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.2px;
   transition: all 0.4s;
 }
 
@@ -36,7 +35,6 @@
   color: #dc8915;
 }
 
-.nav-menu,
 .navbar-800 {
   display: none;
 }

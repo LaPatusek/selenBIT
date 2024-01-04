@@ -1,12 +1,20 @@
 import emailjs from '@emailjs/browser';
 import { Briefcase, Call } from 'iconsax-react';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import useInput from '../Components/hooks/useInput';
 import styles from './kontakt.module.css';
 
-const Kontakt = () => {
-  const formRef = useRef();
+declare var process: {
+  env: {
+    REACT_APP_SMTP_ID: string;
+    REACT_APP_TEMPLATE_ID: string;
+    REACT_APP_PUBLIC_KEY: string;
+  };
+};
+
+const Kontakt: React.FC = () => {
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const {
     value: enteredName,
@@ -15,7 +23,9 @@ const Kontakt = () => {
     inputBlurHandler: nameBlurHandler,
     hasError: nameHasError,
     reset: nameReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   const {
     value: enteredTopic,
@@ -24,7 +34,9 @@ const Kontakt = () => {
     inputBlurHandler: topicBlurHandler,
     hasError: topicHasError,
     reset: topicReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   const {
     value: enteredMail,
@@ -33,7 +45,9 @@ const Kontakt = () => {
     inputBlurHandler: mailBlurHandler,
     hasError: mailHasError,
     reset: mailReset,
-  } = useInput((value) => value.trim().includes('@'));
+  } = useInput({
+    validateValue: (value: string) => value.trim().includes('@'),
+  });
 
   const {
     value: enteredMessage,
@@ -42,7 +56,9 @@ const Kontakt = () => {
     inputBlurHandler: messageBlurHandler,
     hasError: messageHasError,
     reset: messageReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   let formIsValid = false;
 
@@ -50,7 +66,7 @@ const Kontakt = () => {
     formIsValid = true;
   }
 
-  const submitHandler = (e) => {
+  const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formIsValid) {
@@ -61,7 +77,7 @@ const Kontakt = () => {
       .sendForm(
         process.env.REACT_APP_SMTP_ID,
         process.env.REACT_APP_TEMPLATE_ID,
-        formRef.current,
+        formRef.current!,
         process.env.REACT_APP_PUBLIC_KEY,
       )
       .then(
@@ -171,7 +187,6 @@ const Kontakt = () => {
               }`}
             >
               <textarea
-                type='textarea'
                 id='requirements'
                 name='message'
                 autoComplete='off'

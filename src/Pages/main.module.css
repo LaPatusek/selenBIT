@@ -1,55 +1,52 @@
 .second-section {
-  padding: 5rem 2rem 2rem 2rem;
-  height: 800px;
+  padding: 5rem 2rem;
   background-color: rgb(219, 219, 219);
 }
 
-.second-section-title h1 {
+.second-section-title {
   text-align: center;
+}
+
+.second-section-title h1 {
   color: var(--light-brown);
   text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .second-section-title h2 {
-  text-align: center;
   margin: 10px;
   color: rgb(44, 44, 44);
-  font-size: 3.8rem;
+  font-size: 60px;
   letter-spacing: 0.8px;
 }
 
 .second-section-title p {
-  text-align: center;
   line-height: 20px;
   color: rgb(44, 44, 44);
 }
 
 .second-section-boxes {
-  margin-top: 3%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
+  display: grid;
+  margin: 2.5rem auto 0 auto;
+  width: 80%;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
 }
 
 .content-box {
-  justify-content: center;
+  justify-self: center;
   text-align: center;
-  width: 33%;
+  width: 100%;
   max-width: 400px;
+  min-height: 450px;
   background-color: #192431;
   box-shadow: 8px 10px 20px 0.3px #192431;
   margin: 10px 30px;
   padding: 15px;
-  min-height: 450px;
   border-radius: 15px;
 }
 
 .flex-wrap {
-  justify-self: center;
-  height: fit-content;
   align-self: center;
   padding-bottom: 25px;
 }
@@ -62,137 +59,123 @@
 .content-box h3 {
   margin: 10px 5px 5px 5px;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: var(--light-brown);
 }
 
 .content-box h4 {
   padding: 0px 10px 5px 10px;
-  font-size: 1.8rem;
-  letter-spacing: 0.8px;
-  line-height: 1.7rem;
+  font-size: 28px;
+  letter-spacing: 0.6px;
   color: #fff2d9;
 }
 
 .content-box p {
-  line-height: 1.3rem;
+  line-height: 21px;
   padding: 5px;
 }
 
 .third-section {
   background-color: #232323;
-  min-height: 250px;
-  padding: 25px 5rem 25px 3.5rem;
-  display: flex;
+  padding: 25px 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .third-section--left-part {
-  width: auto;
   max-width: 520px;
 }
 
 .third-section--left-part h2 {
-  font-size: 2.8rem;
+  font-size: 45px;
 }
 
 .third-section--left-part p {
   margin-top: 10px;
-  font-size: 1.2rem;
-  line-height: 1.3rem;
+  font-size: 19px;
+  line-height: 21px;
 }
 
 .third-section--right-part {
-  width: 70%;
-  margin-right: 20px;
-  display: flex;
-  justify-content: flex-end;
+  width: fit-content;
+  justify-self: right;
 }
 
 .fourth-section {
   background-color: #cfaa7b;
-  min-height: 330px;
-  padding: 3.5rem;
-  padding-left: 4rem;
+  padding: 4rem 5rem;
+  text-align: right;
 }
 
 .fourth-section h3 {
-  font-size: 1.3rem;
+  font-size: 21px;
   margin-bottom: 1.3rem;
   letter-spacing: 0.6px;
 }
 
 .fourth-section h4 {
-  font-size: 2rem;
+  font-size: 32px;
   width: 50%;
-  margin-bottom: 2.4rem;
+  margin: 0 0 2.4rem auto;
   letter-spacing: 0.5px;
 }
 
 .fourth-section--button {
-  --color: #192431;
-  border: 1px solid var(--color);
-  background-color: var(--color);
-  box-shadow: 5px 5px 15px var(--color);
+  border: 1px solid #192431;
+  background-color: #192431;
+  box-shadow: 5px 5px 15px #192431;
   border-radius: 50px;
   font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 0.7px;
-  padding: 13px 15px 13px 15px;
+  letter-spacing: 0.5px;
+  padding: 12px 15px 13px;
   text-transform: uppercase;
-  color: white;
-  transition: all 0.4s;
+  color: #fff;
+  transition: all 440ms ease-out;
 }
 
-.fourth-section--button:hover,
-.fourth-section--button:active {
+.fourth-section--button:hover {
   background-color: transparent;
-  color: var(--color);
+  color: #192431;
 }
 
-@media screen and (max-width: 800px) {
-  .second-section {
-    display: block;
-    height: auto;
-    width: 100%;
-  }
-
+@media screen and (max-width: 1200px) {
   .second-section-boxes {
-    display: block;
     width: 100%;
-    margin: 0;
-    padding: 0;
   }
+}
 
-  .content-box {
-    width: 100%;
-    margin-top: 1.8rem;
-    margin-left: 0;
+@media screen and (max-width: 950px) {
+  .second-section-boxes {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .third-section {
-    min-height: auto;
-    display: block;
-    padding: 3rem;
-  }
-
-  .third-section--left-part {
-    display: block;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
   }
 
   .third-section--right-part {
     margin-top: 2rem;
-    display: block;
   }
 
   .fourth-section {
-    padding: 3rem;
+    padding: 2rem;
+    text-align: unset;
   }
 
   .fourth-section h3 {
-    font-size: 1.1rem;
+    font-size: 16px;
   }
 
   .fourth-section h4 {
     width: 100%;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+  }
+
+  .fourth-section--button {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
   }
 }

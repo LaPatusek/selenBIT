@@ -1,12 +1,12 @@
 .blockquote-wrapper {
-  width: 50%;
   max-width: 350px;
 }
 
 .blockquote h2 {
   position: relative;
   color: var(--light-brown);
-  font-size: 1.2rem;
+  font-size: 19px;
+  line-height: 20px;
   letter-spacing: 0.4px;
   border: solid 2px;
   border-radius: 20px;
@@ -38,16 +38,16 @@
 }
 
 .blockquote h3 {
-  color: #ffffff;
-  font-size: 1.3rem;
-  line-height: 1.2;
+  color: #fff;
+  font-size: 22px;
+  line-height: 23px;
+  letter-spacing: 0.3px;
   padding-top: 15px;
-  margin-left: 150px;
-  padding-left: 12px;
+  margin-left: 160px;
 }
 
 .blockquote h3:first-letter {
-  margin-left: -12px;
+  margin-left: -16px;
 }
 
 .blockquote span {

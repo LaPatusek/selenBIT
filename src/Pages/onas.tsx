@@ -1,4 +1,5 @@
 import { Messages3 } from 'iconsax-react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import wsiz from '../Assets/WSIiZ.webp';
@@ -7,7 +8,7 @@ import BonumConsulting from '../Assets/logo.webp';
 import photo from '../Assets/meeting-photo.webp';
 import styles from './onas.module.css';
 
-const Onas = () => {
+const Onas: React.FC = () => {
   return (
     <div className={styles.background}>
       <Helmet>
@@ -42,7 +43,7 @@ const Onas = () => {
             szkolenia są skierowane dla osób w każdym wieku – od dzieci
             pomagając im wejść w świat informatycznej logiki po seniorów, którzy
             ochoczo wkraczają w świat ułatwień jakie niesie ze sobą doba
-            cyfryzacji. Organizujemy szkolenia grupowe, jak i indywidualne.{' '}
+            cyfryzacji. Organizujemy szkolenia grupowe, jak i indywidualne.
             <br />
             Spotkajmy się na szkoleniu!
           </h2>
@@ -54,8 +55,12 @@ const Onas = () => {
           </Link>
         </section>
         <section className={styles['left-section-800']}>
-          <p className={styles.paragraf}>Selenbit - przekazujemy wiedzę</p>
-          <img src={photo} alt='' loading='lazy' />
+          <p className={styles.paragraf}>SelenBit - przekazujemy wiedzę</p>
+          <img
+            src={photo}
+            alt='SelenBit - przekazujemy wiedzę'
+            loading='lazy'
+          />
           <div className={styles['left-section--quote']}>
             <p>
               „Żyj tak, jakbyś miał umrzeć jutro. Ucz się tak, jakbyś miał żyć

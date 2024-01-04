@@ -1,8 +1,9 @@
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import szkolenia from '../json/szkolenia.json';
 import styles from './szkolenia.module.css';
 
-const Szkolenia = () => {
+const Szkolenia: React.FC = () => {
   return (
     <div className={styles.background}>
       <Helmet>
@@ -27,7 +28,7 @@ const Szkolenia = () => {
                     src={Item.src}
                     width='56px'
                     height='56px'
-                    alt={Item.title}
+                    alt={`Szkolenia ${Item.title}`}
                   />
                   <h3>{Item.title}</h3>
                 </div>
@@ -49,7 +50,7 @@ const Szkolenia = () => {
                     src={Item.src}
                     width='56px'
                     height='56px'
-                    alt={Item.title}
+                    alt={`Szkolenia ${Item.title}`}
                   />
                   <h3>{Item.title}</h3>
                 </div>

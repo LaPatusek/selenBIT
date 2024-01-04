@@ -1,22 +1,22 @@
 import { ArrowDown } from 'iconsax-react';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import useObserver from '../hooks/useObserver';
 import styles from './animatedBackground.module.css';
 
-const AnimatedBackground = () => {
-  const textRef = useRef();
+const AnimatedBackground: React.FC = () => {
+  const textRef = useRef<HTMLDivElement>(null);
   const isVisible = useObserver(textRef);
 
-  const generateBoxShadow = (n) => {
-    let value = `${getRandom(100)}vw ${getRandom(230)}vh #FFF`;
+  const generateBoxShadow = (n: number) => {
+    let value = `${getRandom(100)}vw ${getRandom(200)}vh #FFF`;
     for (let i = 2; i <= n; i++) {
-      value += `, ${getRandom(100)}vw ${getRandom(230)}vh #FFF`;
+      value += `, ${getRandom(100)}vw ${getRandom(200)}vh #FFF`;
     }
     return value;
   };
 
-  const getRandom = (max) => {
+  const getRandom = (max: number) => {
     return Math.floor(Math.random() * max);
   };
 
@@ -34,7 +34,7 @@ const AnimatedBackground = () => {
       <div className={`${styles.stars3}`} style={{ boxShadow: bigShadows }} />
       <div className={styles.text}>
         <div className={styles['higher-text']}>
-          <h1>Rozwiązania IT których potrzebujesz</h1>
+          <h1>Rozwiązania IT, których potrzebujesz</h1>
           <a href='#oferta'>
             <ArrowDown color='#fff' /> Zobacz teraz <ArrowDown color='#fff' />
           </a>
@@ -48,9 +48,7 @@ const AnimatedBackground = () => {
         >
           <h2>Przyszłość zaczyna się tutaj</h2>
           <div className={`${styles['link-box']} flex`}>
-            <Link to='/szkolenia' className={styles['main-button']}>
-              nasza oferta
-            </Link>
+            <Link to='/szkolenia'>Nasza oferta</Link>
           </div>
         </div>
       </div>
