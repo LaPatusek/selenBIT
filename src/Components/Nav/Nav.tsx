@@ -31,8 +31,6 @@ const Nav: React.FC = () => {
     }
   }, [menuIsVis]);
 
-  console.log(pathname)
-
   useEffect(() => {
     if (pathname === '/' || pathname === '/main' || pathname === '/oferta') {
       SetMainPageState(true);
