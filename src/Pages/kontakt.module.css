@@ -1,12 +1,3 @@
-.wrap {
-  background-color: black;
-  height: 700px;
-  width: 100%;
-  opacity: 0.77;
-  justify-content: center;
-  align-content: center;
-}
-
 .background-image {
   height: 700px;
   background-image: url(../Assets/backgroudimg.webp);
@@ -15,19 +6,30 @@
   background-size: cover;
 }
 
+.wrap {
+  padding: 4rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 700px;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
+
 .wrap h1 {
-  font-size: 3rem;
+  font-size: 48px;
   user-select: none;
 }
 
 .wrap hr {
   background-color: var(--orange);
-  height: 2px;
+  height: 3px;
   margin: 3px 0 25px 0;
+  border: 0;
 }
 
 .left-section {
-  margin: 4rem;
+  width: fit-content;
+  justify-self: right;
 }
 
 .left-section h2 {
@@ -43,33 +45,35 @@
 }
 
 .contact-block {
-  position: relative;
+  grid-template-columns: 44px calc(100% - 44px);
+  column-gap: 10px;
   margin-bottom: 30px;
 }
 
-.contact-block h2 {
-  position: absolute;
-  top: 10%;
-  left: 3.5rem;
-  letter-spacing: 0.5px;
-  font-size: 1.1rem;
+.contact-text {
+  align-self: center;
 }
 
-.contact-block p {
-  position: absolute;
-  top: 60%;
-  left: 3.5rem;
+.contact-text h2 {
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.contact-text a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .right-section {
-  margin: 4rem;
-  width: 30rem;
+  width: 60%;
 }
 
 .right-section h2 {
   text-align: center;
-  letter-spacing: 1px;
-  font-size: 1.5rem;
+  letter-spacing: 0.4px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -83,7 +87,6 @@
   border-radius: 1rem;
   background: none;
   padding: 8px;
-  font-size: 1rem;
   color: #f5f5f5;
   transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(38, 38, 38, 0.5);
@@ -128,27 +131,28 @@
   resize: none;
   height: 6rem;
   writing-mode: horizontal-tb;
-  width: 96%;
+  width: 96.5%;
 }
 
 .right-section textarea::placeholder {
-  color: #979294;
+  color: #c0c0c0;
+  font-size: 16px;
+  letter-spacing: 0.3px;
 }
 
 .right-section button {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.4px;
-  color: white;
+  color: #fff;
   margin-top: 5px;
-  padding: 5px;
+  padding: 8px;
   width: 100%;
-  height: 35px;
   border: 2px solid var(--orange);
   border-radius: 20px;
   background-color: var(--orange);
   cursor: pointer;
-  transition: all 0.45s;
+  transition: all 350ms;
 }
 
 .right-section button:hover {
@@ -157,12 +161,11 @@
   color: var(--orange);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .wrap {
-    display: block !important;
-    padding: 3rem 0;
-    height: auto;
-    width: auto;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem 0;
+    height: fit-content;
   }
 
   .background-image {
@@ -172,7 +175,7 @@
   .left-section,
   .right-section {
     width: auto;
-    margin: 2rem;
+    margin: 1rem 2rem;
   }
 
   .right-section textarea {

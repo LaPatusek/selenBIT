@@ -19,10 +19,7 @@ const Szkolenia: React.FC = () => {
         <div className={styles['main-section--left']}>
           {szkolenia.szkolenia.left.map((Item) => {
             return (
-              <div
-                className={`${styles['main-section-container']} grid`}
-                key={Item.title}
-              >
+              <div className={`${styles['container']} grid`} key={Item.title}>
                 <div className={`${styles['container-title']} grid`}>
                   <img
                     src={Item.src}
@@ -41,10 +38,7 @@ const Szkolenia: React.FC = () => {
         <div className={styles['main-section--right']}>
           {szkolenia.szkolenia.right.map((Item) => {
             return (
-              <div
-                className={`${styles['main-section-container']} grid`}
-                key={Item.title}
-              >
+              <div className={`${styles['container']} grid`} key={Item.title}>
                 <div className={`${styles['container-title']} grid`}>
                   <img
                     src={Item.src}

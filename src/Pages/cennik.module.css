@@ -1,6 +1,5 @@
 .wrap {
   padding: 4rem;
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
   justify-content: center;
@@ -32,7 +31,6 @@
 }
 
 .contact-block {
-  display: grid;
   grid-template-columns: 44px calc(100% - 44px);
   column-gap: 10px;
   margin-bottom: 30px;
@@ -143,7 +141,7 @@
   background-color: var(--orange);
   border-radius: 20px;
   cursor: pointer;
-  transition: all 450ms;
+  transition: all 350ms;
 }
 
 .right-section button:hover {

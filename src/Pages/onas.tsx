@@ -54,22 +54,6 @@ const Onas: React.FC = () => {
             <Messages3 size='17' />
           </Link>
         </section>
-        <section className={styles['left-section-800']}>
-          <p className={styles.paragraf}>SelenBit - przekazujemy wiedzę</p>
-          <img
-            src={photo}
-            alt='SelenBit - przekazujemy wiedzę'
-            loading='lazy'
-          />
-          <div className={styles['left-section--quote']}>
-            <p>
-              „Żyj tak, jakbyś miał umrzeć jutro. Ucz się tak, jakbyś miał żyć
-              wiecznie.”
-            </p>
-            <hr />
-            <p>Gandhi Mahatma</p>
-          </div>
-        </section>
       </div>
       <div className={styles['bottom-section']}>
         <h2>Współpracowaliśmy</h2>

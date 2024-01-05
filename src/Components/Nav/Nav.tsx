@@ -1,4 +1,4 @@
-import { Star1 } from 'iconsax-react';
+import { HambergerMenu } from 'iconsax-react';
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../Assets/cropped-logo11-300x147.webp';
@@ -77,7 +77,7 @@ const Nav: React.FC = () => {
         <img src={Logo} alt='logo' height={'147px'} width={'300px'} />
 
         <div className={styles['hamburger-menu-icon']} onClick={menuHandler}>
-          <Star1 size='32' variant='Bold' />
+          <HambergerMenu size='32' />
         </div>
 
         {menuIsVis && (

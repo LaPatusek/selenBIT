@@ -134,7 +134,7 @@ const Cennik: React.FC = () => {
   };
 
   return (
-    <div className={styles.wrap}>
+    <div className={`${styles.wrap} grid`}>
       <Helmet>
         <link rel='canonical' href='https://selenbit.pl/#/cennik' />
       </Helmet>
@@ -143,7 +143,7 @@ const Cennik: React.FC = () => {
           Skontaktuj się <br /> i zapytaj o cenę
         </h1>
         <hr />
-        <div className={styles['contact-block']}>
+        <div className={`${styles['contact-block']} grid`}>
           <div className={styles.icon}>
             <Call variant='Bold' />
           </div>
@@ -153,15 +153,14 @@ const Cennik: React.FC = () => {
           </div>
         </div>
 
-        <div className={styles['contact-block']}>
+        <div className={`${styles['contact-block']} grid`}>
           <div className={styles.icon}>
             <Briefcase variant='Bold' />
           </div>
           <div className={styles['contact-text']}>
             <h2> Email</h2>
             <a href='mailto:eryktrojanowski@gmail.com'>
-              {' '}
-              eryktrojanowski@gmail.com{' '}
+              eryktrojanowski@gmail.com
             </a>
           </div>
         </div>

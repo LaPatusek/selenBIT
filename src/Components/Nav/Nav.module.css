@@ -19,6 +19,7 @@
 .nav {
   align-self: flex-end;
   justify-self: right;
+  margin-bottom: 13px;
 }
 
 .nav-links a {
@@ -71,12 +72,6 @@
 
   .hamburger-menu-icon svg {
     transform: translateX(5px) translateY(-5px);
-    transition: all 1.5s;
-  }
-
-  .hamburger-menu-icon:active svg,
-  .hamburger-menu-icon:hover svg {
-    transform: translateX(5px) translateY(-5px) rotate(360deg);
   }
 
   .nav-menu-800 {
@@ -96,9 +91,6 @@
     content: '';
     top: 0;
     right: 0;
-    background: url(../../Assets/BackgroundMenu.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 0;
     width: 0;
     transform: translateY(-200px);

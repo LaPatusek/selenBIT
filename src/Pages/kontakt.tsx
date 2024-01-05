@@ -100,24 +100,30 @@ const Kontakt: React.FC = () => {
       <Helmet>
         <link rel='canonical' href='https://selenbit.pl/#/kontakt' />
       </Helmet>
-      <div className={`${styles.wrap} flex`}>
+      <div className={`${styles.wrap} grid`}>
         <section className={styles['left-section']}>
           <h1>Skontaktuj się z nami!</h1>
           <hr />
-          <div className={styles['contact-block']}>
+          <div className={`${styles['contact-block']} grid`}>
             <div className={styles.icon}>
               <Call variant='Bold' />
             </div>
-            <h2>Telefon</h2>
-            <p> +48 531 771 944 </p>
+            <div className={styles['contact-text']}>
+              <h2>Telefon</h2>
+              <a href='tel:+48531771944'> +48 531 771 944 </a>
+            </div>
           </div>
 
-          <div className={styles['contact-block']}>
+          <div className={`${styles['contact-block']} grid`}>
             <div className={styles.icon}>
               <Briefcase variant='Bold' />
             </div>
-            <h2> Email</h2>
-            <p> eryktrojanowski@gmail.com </p>
+            <div className={styles['contact-text']}>
+              <h2> Email</h2>
+              <a href='mailto:eryktrojanowski@gmail.com'>
+                eryktrojanowski@gmail.com
+              </a>
+            </div>
           </div>
         </section>
 
