@@ -13,11 +13,16 @@ const Onas: React.FC = () => {
     <div className={styles.background}>
       <Helmet>
         <link rel='canonical' href='https://selenbit.pl/#/o-nas' />
+        <meta name='robots' content='index, follow' />
       </Helmet>
-      <div className={styles.wrap}>
+      <div className={`${styles.wrap} grid`}>
         <section className={styles['left-section']}>
           <p className={styles.paragraf}>Selenbit - przekazujemy wiedzę</p>
-          <img src={photo} alt='' loading='lazy' />
+          <img
+            src={photo}
+            alt='Selenbit - przekazujemy wiedzę'
+            loading='lazy'
+          />
           <div className={styles['left-section--quote']}>
             <p>
               „Żyj tak, jakbyś miał umrzeć jutro. Ucz się tak, jakbyś miał żyć

@@ -137,6 +137,7 @@ const Cennik: React.FC = () => {
     <div className={`${styles.wrap} grid`}>
       <Helmet>
         <link rel='canonical' href='https://selenbit.pl/#/cennik' />
+        <meta name='robots' content='index, follow' />
       </Helmet>
       <section className={styles['left-section']}>
         <h1>

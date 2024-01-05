@@ -8,11 +8,7 @@ const Nav: React.FC = () => {
   const [menuIsVis, setMenuIsVis] = useState<boolean>(false);
   const [mainPageState, SetMainPageState] = useState<boolean>(false);
   const { pathname } = useLocation();
-  const linkRefOne = useRef<HTMLAnchorElement>(null);
-  const linkRefTwo = useRef<HTMLAnchorElement>(null);
-  const linkRefThree = useRef<HTMLAnchorElement>(null);
-  const linkRefFour = useRef<HTMLAnchorElement>(null);
-  const linkRefFive = useRef<HTMLAnchorElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const menuHandler = () => {
     setMenuIsVis((prev) => !prev);
@@ -27,35 +23,35 @@ const Nav: React.FC = () => {
     }
 
     if (menuIsVis) {
-      const linkOne = linkRefOne?.current!;
-      const linkTwo = linkRefTwo?.current!;
-      const linkThree = linkRefThree?.current!;
-      const linkFour = linkRefFour?.current!;
-      const linkFive = linkRefFive?.current!;
+      const menuRefCurr = menuRef.current!;
+
       setTimeout(() => {
-        linkOne.classList.toggle(styles['aktywne']);
-        linkTwo.classList.toggle(styles['aktywne']);
-        linkThree.classList.toggle(styles['aktywne']);
-        linkFour.classList.toggle(styles['aktywne']);
-        linkFive.classList.toggle(styles['aktywne']);
+        menuRefCurr?.classList.toggle(styles['active-menu']);
       }, 200);
     }
   }, [menuIsVis]);
 
+  console.log(pathname)
+
   useEffect(() => {
-    if (pathname === '/' || pathname === '/main') {
+    if (pathname === '/' || pathname === '/main' || pathname === '/oferta') {
       SetMainPageState(true);
     } else SetMainPageState(false);
   }, [pathname]);
 
   return (
     <div
-      className={`${styles.header} ${
+      className={`${styles.header} grid ${
         mainPageState ? styles['main-navbar'] : ''
       }`}
     >
       <Link to='/'>
-        <img src={Logo} alt='logo' width='auto' height={'127px'} />
+        <img
+          src={Logo}
+          alt='SelenBit - Szkolenia Informatyczne Rzeszów'
+          width='auto'
+          height={'127px'}
+        />
       </Link>
 
       <div className={`${styles.nav}`}>
@@ -68,16 +64,12 @@ const Nav: React.FC = () => {
         </div>
       </div>
 
-      <div
-        className={`${styles['navbar-800']} ${
-          menuIsVis ? styles['active-menu-800'] : ''
-        }`}
-      >
+      <div className={`${styles['navbar-800']}`}>
         <div className={styles['hamburger-menu-icon']} onClick={menuHandler}>
           {!menuIsVis && <HambergerMenu size='32' />}
           {menuIsVis && (
             <svg
-              fill='#ffffff'
+              fill='#000000'
               height='24px'
               width='24px'
               viewBox='0 0 492 492'
@@ -96,37 +88,19 @@ const Nav: React.FC = () => {
         </div>
 
         {menuIsVis && (
-          <div className={`${styles['nav-menu-800']}`} onClick={menuHandler}>
+          <div
+            className={`${styles['nav-menu-800']}`}
+            onClick={menuHandler}
+            ref={menuRef}
+          >
             <ul>
-              <li>
-                <Link to='/main' ref={linkRefOne}>
-                  Strona <br /> główna
-                </Link>
-              </li>
-
-              <li>
-                <Link to='/szkolenia' ref={linkRefTwo}>
-                  szkolenia
-                </Link>
-              </li>
-
-              <li>
-                <Link to='/cennik' ref={linkRefThree}>
-                  Cennik
-                </Link>
-              </li>
-
-              <li>
-                <Link to='/o-nas' ref={linkRefFour}>
-                  O nas
-                </Link>
-              </li>
-
-              <li>
-                <Link to='/kontakt' ref={linkRefFive}>
-                  kontakt
-                </Link>
-              </li>
+              <Link to='/main'>
+                Strona <br /> główna
+              </Link>
+              <Link to='/szkolenia'>szkolenia</Link>
+              <Link to='/cennik'>Cennik</Link>
+              <Link to='/o-nas'>O nas</Link>
+              <Link to='/kontakt'>kontakt</Link>
             </ul>
           </div>
         )}

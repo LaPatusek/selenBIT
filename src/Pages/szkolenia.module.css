@@ -24,7 +24,7 @@
   padding-left: 100px;
   width: 75px;
   height: 2px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .page-title h3::after {
@@ -35,7 +35,7 @@
   padding-right: 100px;
   width: 75px;
   height: 2px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .page-title h1 {
@@ -48,6 +48,8 @@
   display: flex;
   justify-content: center;
   padding: 10px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .main-section--right {
@@ -55,8 +57,8 @@
 }
 
 .container {
-  margin: 25px;
-  padding: 26px;
+  margin: 25px 15px;
+  padding: 16px 26px 26px 26px;
   background-color: #f0f0f0;
   border-radius: 20px;
   border: 4px solid transparent;
@@ -65,10 +67,11 @@
 
 .container-title {
   grid-template-columns: 64px calc(100% - 64px);
+  margin-bottom: 20px;
 }
 
 .container-title img {
-  transform: translateY(-15px);
+  justify-self: center;
   object-fit: contain;
   padding: 5px;
   width: 56px;
@@ -76,36 +79,25 @@
 }
 
 .container-title h3 {
+  align-self: center;
   color: #0c0c0c;
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
   font-weight: bold;
-  width: fit-content;
-  font-size: 1.4rem;
+  font-size: 24px;
   user-select: none;
 }
 
 .container p {
   color: gray;
-  letter-spacing: 0.6px;
-  font-size: 1.05rem;
-  line-height: 1.25rem;
+  letter-spacing: 0.4px;
+  font-size: 17px;
+  line-height: 19px;
   padding-bottom: 10px;
-}
-
-.container a {
-  color: black;
-  cursor: pointer;
-  justify-self: right;
-  margin-right: 10px;
-  font-size: 18px;
-  letter-spacing: 0.6x;
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
   .main-section {
     display: block;
+    max-width: unset;
   }
 
   .page-title {

@@ -8,6 +8,7 @@ const Szkolenia: React.FC = () => {
     <div className={styles.background}>
       <Helmet>
         <link rel='canonical' href='https://selenbit.pl/#/szkolenia' />
+        <meta name='robots' content='index, follow' />
       </Helmet>
       <section className={styles['page-title']}>
         <div className={styles['display-flex']}>

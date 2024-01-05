@@ -99,6 +99,7 @@ const Kontakt: React.FC = () => {
     <div className={styles['background-image']}>
       <Helmet>
         <link rel='canonical' href='https://selenbit.pl/#/kontakt' />
+        <meta name='robots' content='index, follow' />
       </Helmet>
       <div className={`${styles.wrap} grid`}>
         <section className={styles['left-section']}>

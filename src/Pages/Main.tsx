@@ -13,6 +13,7 @@ const Main: React.FC = () => {
     <Fragment>
       <Helmet>
         <link rel='canonical' href='https://selenbit.pl/' />
+        <meta name='robots' content='index, follow' />
       </Helmet>
 
       <section className={styles['first-section']}>
@@ -20,7 +21,7 @@ const Main: React.FC = () => {
       </section>
 
       <section className={styles['second-section']}>
-        <div className={styles['second-section-title']}>
+        <div className={`${styles['second-section-title']} center`}>
           <h1>Co oferujemy?</h1>
           <h2>Szkolenia</h2>
           <p>
@@ -29,8 +30,8 @@ const Main: React.FC = () => {
           </p>
         </div>
 
-        <div className={styles['second-section-boxes']}>
-          <div className={`${styles['content-box']} grid`}>
+        <div className={`${styles['second-section-boxes']} grid`}>
+          <div className={`${styles['content-box']} center grid`}>
             <div className={styles['flex-wrap']}>
               <img
                 src={firstIcon}
@@ -46,7 +47,7 @@ const Main: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className={`${styles['content-box']} grid`}>
+          <div className={`${styles['content-box']} center grid`}>
             <div className={styles['flex-wrap']}>
               <img
                 src={secondIcon}
@@ -62,7 +63,7 @@ const Main: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className={`${styles['content-box']} grid`}>
+          <div className={`${styles['content-box']} center grid`}>
             <div className={styles['flex-wrap']}>
               <img
                 src={thirdIcon}
@@ -92,7 +93,7 @@ const Main: React.FC = () => {
         </Link>
       </section>
 
-      <section className={styles['third-section']}>
+      <section className={`${styles['third-section']} grid`}>
         <div className={styles['third-section--left-part']}>
           <h2>O nas</h2>
           <p>

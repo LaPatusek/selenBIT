@@ -132,7 +132,7 @@
   transition: all 440ms;
 }
 
-.main-button:hover {
+.link-box a:hover {
   background: transparent;
 }
 
