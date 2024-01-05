@@ -41,74 +41,41 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .nav-links,
-  .header {
+  .nav {
     display: none;
   }
 
-  .navbar-800 {
-    padding: 20px 0;
-    display: grid;
-    position: relative;
-    background-color: #090a0f;
-    background: radial-gradient(ellipse at bottom, #1b2735 -250%, #090a0f 100%);
+  .header {
+    padding: 10px 0;
+    grid-template-columns: unset;
   }
 
-  .navbar-800 img {
+  .navbar-800 {
+    display: block;
+  }
+
+  .header a {
     justify-self: center;
   }
 
   .hamburger-menu-icon {
-    z-index: 67;
+    z-index: 99;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
-    background-color: #3f6ba5;
-    padding: 15px;
-    border-bottom-left-radius: 100px;
-    box-shadow: #3f6ba5 5px -5px 25px 10px;
-  }
-
-  .hamburger-menu-icon svg {
-    transform: translateX(5px) translateY(-5px);
   }
 
   .nav-menu-800 {
     position: absolute;
     content: '';
     top: 0;
-    right: 0;
-    border-bottom-left-radius: 200px;
-    z-index: 61;
-    height: 80px;
-    width: 80px;
-    transition: all 0.6s;
-  }
-
-  .navbar-800::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    height: 0;
-    width: 0;
-    transform: translateY(-200px);
-    transition: all 0.6s;
-    border-bottom-left-radius: 100%;
-  }
-
-  .active-menu-800::before {
-    transform: translateY(0px);
-    height: 100vh;
-    width: 100vw;
-    border-bottom-left-radius: 0%;
-    z-index: 60;
-  }
-
-  .active-menu-800 {
+    left: 0;
+    z-index: 80;
     width: 100vw;
     height: 100vh;
+    transition: all 0.6s;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .nav-menu-800 ul {
@@ -116,8 +83,10 @@
     top: 0;
     right: 0;
     display: grid;
-    height: 100vh;
-    width: 100vw;
+    z-index: 82;
+    height: 100%;
+    background-color: #dc8915;
+    width: 60%;
     overflow: hidden;
   }
 
@@ -130,14 +99,8 @@
 
   .nav-menu-800 a {
     color: white;
-    font-size: 1.5rem;
-    padding: 10px;
+    font-size: 22px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    visibility: hidden;
-  }
-
-  .aktywne {
-    visibility: visible !important;
   }
 }
